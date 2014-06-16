@@ -12,7 +12,7 @@ using stx.async.arrowlet.Repeat;
 using stx.async.arrowlet.RightChoice;
 using stx.async.arrowlet.State;
 using stx.async.arrowlet.Then;
-//using stx.async.arrowlet.Upshot;
+using stx.async.arrowlet.Upshot;
 
 
 class Test{
