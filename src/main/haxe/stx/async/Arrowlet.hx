@@ -12,7 +12,6 @@ import stx.types.*;
 
 import stx.type.*;
 
-import haxe.Constraints;
 
 
 import stx.ifs.Reply;
