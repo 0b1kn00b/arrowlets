@@ -10,7 +10,7 @@
     "dependencies": {
         "tink_core": "1.0.0-rc.7",
         "pointwise": "0.6.3",
-        "addendum": "0.6.2"
+        "stx_addendum": "0.6.2"
     },
     "classPath": "src/main/haxe"
 }
