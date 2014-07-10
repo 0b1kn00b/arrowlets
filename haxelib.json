@@ -4,8 +4,8 @@
     "license": "MIT",
     "tags": ["functional", "asynchronous", "callbacks"],
     "description": "A library for pain free asynchronous programming",
-    "version": "0.8.1",
-    "releasenote": "Git url",
+    "version": "0.8.2",
+    "releasenote": "Compatability for Future added.",
     "contributors": ["0b1kn00b"],
     "dependencies": {
         "tink_core": "1.0.0-rc.6",
