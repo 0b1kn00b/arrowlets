@@ -1,14 +1,14 @@
 {
     "name": "arrowlets",
-    "url": "",
+    "url": "https://github.com/0b1kn00b/arrowlets",
     "license": "MIT",
     "tags": ["functional", "asynchronous", "callbacks"],
     "description": "A library for pain free asynchronous programming",
-    "version": "0.8.0",
-    "releasenote": "This has been stable for a year or so.",
+    "version": "0.8.1",
+    "releasenote": "Git url",
     "contributors": ["0b1kn00b"],
     "dependencies": {
-        "tink_core": "1.0.0-rc.7",
+        "tink_core": "1.0.0-rc.6",
         "pointwise": "0.6.3",
         "stx_addendum": "0.6.2"
     },
