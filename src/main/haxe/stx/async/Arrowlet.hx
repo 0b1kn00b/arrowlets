@@ -1,18 +1,17 @@
 package stx.async;
 
-
 import tink.core.Callback;
 import tink.core.Future;
-import stx.types.Tuple2;
 import tink.core.Error;
+import stx.types.Tuple2;
+
+
 import stx.types.Fault;
 import haxe.ds.Option in EOption;
 import tink.core.Either in EEither;
 import stx.types.*;
 
 import stx.type.*;
-
-
 
 import stx.ifs.Reply;
 

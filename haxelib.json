@@ -1,0 +1,16 @@
+{
+    "name": "arrowlets",
+    "url": "",
+    "license": "MIT",
+    "tags": ["functional", "asynchronous", "callbacks"],
+    "description": "A library for pain free asynchronous programming",
+    "version": "0.8.0",
+    "releasenote": "This has been stable for a year or so.",
+    "contributors": ["0b1kn00b"],
+    "dependencies": {
+        "tink_core": "1.0.0",
+        "pointwise": "",
+        "addendum": ""
+    },
+    "classPath": "src/main/haxe"
+}
