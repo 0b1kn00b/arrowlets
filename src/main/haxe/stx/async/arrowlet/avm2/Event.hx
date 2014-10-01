@@ -1,6 +1,5 @@
 package stx.async.arrowlet.avm2;
 
-
 import stx.types.*;
 
 using stx.async.Arrowlet;

@@ -1,28 +1,30 @@
 package stx.async.arrowlet;
 
+import tink.core.Future;
+
 import stx.Tuples;
 import tink.core.Either in EEither;
 import stx.types.*;
 import stx.types.Tuple2;
 using stx.async.Arrowlet;
 
-typedef ArrowletLeftChoice<B,C,D> = Arrowlet<EEither<B,D>,EEither<C,D>>
-abstract LeftChoice<B,C,D>(ArrowletLeftChoice<B,C,D>) from ArrowletLeftChoice<B,C,D> to ArrowletLeftChoice<B,C,D>{
+import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
 
-	public function new(a:Arrowlet<B,C>){
-		return new Arrowlet(
-			inline function(?i: EEither<B,D>, cont: EEither<C,D>->Void){
-				switch (i) {
-					case Left(v) 	:
-						new Apply().withInput( tuple2(a,v) ,
-							function(x){
-								cont( Left(x) );
-							}
-						);
-					case Right(v) :
-						cont( Right(v) );
-				}
-			}
-		);
+typedef ArrowletLeftChoice<B,C,D> = Arrowlet<EEither<B,D>,EEither<C,D>>
+
+class LeftChoice<B,C,D> implements IArrowlet<EEither<B,D>,EEither<C,D>>{
+	public var fst : Arrowlet<B,C>;
+	public function new(fst){
+		this.fst = fst;
+	}
+	public function apply(i: EEither<B,D>):Future<EEither<C,D>>{
+		return switch (i) {
+			case Left(v) 	:
+				new Apply().then(Left).apply(tuple2(fst,v));
+			case Right(v) :
+			 	var trg = Future.trigger();
+				trg.trigger(Right(v));
+				return trg.asFuture();
+		}
 	}
 }

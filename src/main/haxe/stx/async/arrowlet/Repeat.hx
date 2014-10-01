@@ -1,5 +1,7 @@
 package stx.async.arrowlet;
 
+import tink.core.Future;
+
 import stx.types.Free;
 import stx.types.*;
 
@@ -8,21 +10,25 @@ using stx.async.Arrowlet;
 using stx.async.arrowlet.Repeat;
 using stx.Compose;
 
+import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+
 typedef RepeatType<I,O> = Arrowlet<I,Free<I,O>>;
 
-abstract Repeat<I,O>(Arrowlet<I,O>) to Arrowlet<I,O> from Arrowlet<I,O> to Arrowlet<I,O>{
-	public function new(rpt:RepeatType<I,O>) {
-		this = new Arrowlet(
-			inline function(?i : I, cont : O->Void) : Void {
-				function withRes(res: Free<I, O> ) {
-					switch (res) {
-						case Cont(rv): rpt.withInput(rv, cast withRes#if (flash || js).trampoline()#end); //  break this recursion!
-						case Done(dv): cont(dv);
-					}
-				}
-				rpt.withInput(i, withRes);
+class Repeat<I,O> implements IArrowlet<I,O>{
+	public var fst : Arrowlet<I,Free<I,O>>;
+	public function new(fst){
+		this.fst = fst;
+	}
+	public function apply(v:I):Future<O>{
+		var ft = Future.trigger();
+		function withRes(res: Free<I, O> ) {
+			switch (res) {
+				case Cont(rv): fst.withInput(rv, cast withRes#if (flash || js).trampoline()#end); //  break this recursion!
+				case Done(dv): ft.trigger(dv);
 			}
-		);
+		}
+		fst.apply(v);
+		return ft;
 	}
 }
 class Repeats{

@@ -1,21 +1,24 @@
 package;
 
+using stx.async.Futures;
+import tink.core.Future;
 using stx.Tuples;
 
-using stx.async.Futures;
 using stx.async.Arrowlet;
-using stx.async.arrowlet.Callback;
-using stx.async.arrowlet.Either;
-using stx.async.arrowlet.LeftChoice;
-using stx.async.arrowlet.Option;
-using stx.async.arrowlet.Or;
-using stx.async.arrowlet.Pair;
-using stx.async.arrowlet.Repeat;
-using stx.async.arrowlet.RightChoice;
-using stx.async.arrowlet.State;
-using stx.async.arrowlet.Then;
-using stx.async.arrowlet.Upshot;
 
+import stx.async.arrowlet.Either;
+import stx.async.arrowlet.LeftChoice;
+import stx.async.arrowlet.Option;
+import stx.async.arrowlet.Or;
+import stx.async.arrowlet.Pair;
+import stx.async.arrowlet.Repeat;
+import stx.async.arrowlet.RightChoice;
+import stx.async.arrowlet.State;
+import stx.async.arrowlet.Then;
+import stx.async.arrowlet.Upshot;
+import stx.async.arrowlet.Windmill;
+
+import stx.async.arrowlet.Action;
 
 class Test{
   static function main(){
@@ -43,5 +46,18 @@ class Test{
         return x * 3;
       }
     ).apply(tuple2(10,3)).handle(_);
+
+    var ft = Future.trigger();
+        ft.asFuture().then(
+          function(x:Int,cont:Int->Void){
+            cont(x*3);
+          }
+        ).handle(
+          function(x){
+            trace(x);
+          }
+        );
+        ft.trigger(10);
+      
   }
 }

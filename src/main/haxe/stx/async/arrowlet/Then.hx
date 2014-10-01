@@ -1,17 +1,20 @@
 package stx.async.arrowlet;
 
+import tink.core.Future;
 import stx.types.*;
+
+import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
 
 using stx.async.Arrowlet;
 
-abstract Then<I,O,NO>(Arrowlet<I, NO>) from Arrowlet<I, NO> to Arrowlet<I, NO>{
-	public function new(a: Arrowlet<I, O>,b: Arrowlet<O, NO>){
-		var _a : Arrowlet<I,O> 	= a;
-		var _b : Arrowlet<O,NO> 	= b;
-		this = new Arrowlet(
-			inline function(i: I, cont: NO->Void): Void {
-				var m  = function (reta : O) { _b.withInput(reta, cont);};
-				_a.withInput(i, m);
+class Then<A,B,C> extends Combinator<A,B,B,C,A,C>{
+	public function new(fst:Arrowlet<A,B>,snd:Arrowlet<B,C>){
+		super(fst,snd);
+	}
+	override public function apply(i: A): Future<C>{
+		return fst.apply(i).flatMap(
+			function(x){
+				return snd.apply(x);
 			}
 		);
 	}

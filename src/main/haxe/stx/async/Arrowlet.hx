@@ -1,10 +1,10 @@
 package stx.async;
 
+import stx.async.arrowlet.types.State in TState;
 import tink.core.Callback;
 import tink.core.Future;
 import tink.core.Error;
 import stx.types.Tuple2;
-
 
 import stx.types.Fault;
 import haxe.ds.Option in EOption;
@@ -24,6 +24,7 @@ import stx.Tuples;
 import stx.Eithers;
 import stx.Options;
 
+import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
 import stx.async.arrowlet.*;
 import stx.async.arrowlet.Option;
 import stx.async.arrowlet.State;
@@ -32,18 +33,14 @@ import stx.async.arrowlet.Either;
 
 using stx.Tuples;
 
-typedef ArrowletType<A,B>  = A -> (B->Void) -> Void;
-
-abstract Arrowlet<I,O>(ArrowletType<I,O>) from ArrowletType<I,O> /*to ArrowletType<I,O>3*/{
+@:forward abstract Arrowlet<I,O>(IArrowlet<I,O>) from IArrowlet<I,O> /*to ArrowletType<I,O>3*/{
   @doc("Externally accessible constructor.")
   static public inline function arw<A>():Arrowlet<A,A>{
     return unit();
   }
   @doc("Simple case, return the input.")
   @:noUsing static public function unit<A>():Arrowlet<A,A>{
-    return function(a:A,cont:A->Void):Void{
-      cont(a);
-    }
+    return new Unit();
   }
   @doc("Produces an arrow returning `v`.")
   @:noUsing static public function pure<A,B>(v:B):Arrowlet<A,B>{
@@ -51,16 +48,14 @@ abstract Arrowlet<I,O>(ArrowletType<I,O>) from ArrowletType<I,O> /*to ArrowletTy
       cont(v);
     }
   }
-  public function new(v:I -> (O->Void) -> Void){
+  public function new(v:IArrowlet<I,O>){
     this  = v;
   }
-
+  @:from static inline public function fromCallbackFunction<A,B>(fn:A->(B->Void)->Void):Arrowlet<A,B>{
+    return new CallbackAnonymousArrowlet(fn);
+  }
   @:from static inline public function fromFunction<A,B>(fn:A->B):Arrowlet<A,B>{
-    //trace('fromFunction');
-    return inline function(a:A,b:B->Void):Void{
-      //trace('called fromFunction');
-      b(fn(a));
-    }
+    return new FunctionArrowlet(fn);
   }
   @:from static inline public function fromEndo<A>(fn:A->A):Arrowlet<A,A>{
     return fromFunction(fn);
@@ -95,14 +90,11 @@ abstract Arrowlet<I,O>(ArrowletType<I,O>) from ArrowletType<I,O> /*to ArrowletTy
       b(fn(a));
     }
   }
-  public inline function asFunction():ArrowletType<I,O>{
-    return this;
-  }
 }
 class Arrowlets{
   @doc("Arrowlet application primitive. Calls Arrowlet with `i` and places result in `cont`.")
   static public inline function withInput<I,O>(arw:Arrowlet<I,O>,i:I,cont:O->Void):Void{
-    arw.asFunction()(i,cont);
+    arw.apply(i).handle(cont);
   }
   static public inline function apply<I,O>(arw:Arrowlet<I,O>,i:I):Future<O>{
     var trg       = new FutureTrigger();
@@ -209,11 +201,11 @@ class Arrowlets{
     );
   }
   @doc("Flattens the output of an Arrowlet where it is Option<Option<O>> ")
-  static public function flatten<I,O>(arw:Arrowlet<EOption<I>,EOption<EOption<O>>>):Option<I,O>{
-    return then(arw, Options.flatten);
+  static public function flatten<I,O>(arw:Arrowlet<EOption<I>,EOption<EOption<O>>>):Arrowlet<EOption<I>,EOption<O>>{
+    return Arrowlets.then(arw, stx.Options.flatten);
   }
   @doc("Takes an Arrowlet that produces an Option and returns one that takes an Option also.")
-  static public function fromOption<I,O>(arw:Arrowlet<I,EOption<O>>):Option<I,O>{
+  static public function fromOption<I,O>(arw:Arrowlet<I,EOption<O>>):Arrowlet<EOption<I>,EOption<O>>{
     return flatten(option(arw));
   }
   @doc("Print the output of an Arrowlet")
@@ -230,19 +222,12 @@ class Arrowlets{
       }
     );
   }
-  @:noUsing static public function state<S,A>(a:Arrowlet<S,Tuple2<A,S>>):ArrowletState<S,A>{
+  @:noUsing static public function state<S,A>(a:Arrowlet<S,Tuple2<A,S>>):TState<S,A>{
     return a;
   }
   @doc("Returns an ApplyArrowlet.")
   @:noUsing static public function application<I,O>():Apply<I,O>{
-    return inline function(i:Tuple2<Arrowlet<I,O>,I>,cont : O->Void){
-        Arrowlets.withInput(i.fst(),
-          i.snd(),
-            function(x:O):Void{
-              cont(x);
-            }
-        );
-      }
+    return new Apply();
   }
   #if (flash || js )
   static public function delay<A>(ms:Int):Arrowlet<A,A>{
@@ -255,4 +240,13 @@ class Arrowlets{
     return out;
   }
   #end
+}
+class FutureArrows{
+  static public function then<A,B>(ft:Future<A>,then:Arrowlet<A,B>):Future<B>{
+    return ft.flatMap(
+      function(x:A){
+        return then.apply(x);
+      }
+    );
+  }
 }

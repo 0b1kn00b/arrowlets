@@ -1,6 +1,9 @@
 package stx.async.arrowlet;
 
+import tink.core.Future;
 using stx.Tuples;
+
+import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
 
 using stx.async.Arrowlet;
 
@@ -10,20 +13,11 @@ import stx.Tuples;
 typedef AAIn<I,O> 			= Tuple2<Arrowlet<I,O>,I>;
 typedef TApply<I,O> 		= Arrowlet<AAIn<I,O>,O>;
 
-abstract Apply<I,O>(TApply<I,O>) from TApply<I,O> to TApply<I,O>{
-	static public inline function app(){
-	  return new Apply();
-	}
+class Apply<I,O> implements IArrowlet<AAIn<I,O>,O>{
 	public function new(){
-		this = new Arrowlet(
-			inline function(i:Tuple2<Arrowlet<I,O>,I>,cont: O->Void){
-				i.fst().withInput(
-					i.snd(),
-						function(x){
-							cont(x);
-						}
-				);
-			}
-		);
+
 	}
-}		
+	public function apply(v:Tuple2<Arrowlet<I,O>,I>):Future<O>{
+		return v.fst().apply(v.snd());
+	}
+}

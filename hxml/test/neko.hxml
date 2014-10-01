@@ -2,7 +2,5 @@
 -cp src/main/haxe
 -cp src/test/haxe
 
--lib pointwise
--lib tink_core
--lib addendum 
+
 -neko test/neko_test.n

@@ -1,5 +1,8 @@
 package stx.async.arrowlet;
 
+import stx.types.Tuple2;
+import tink.core.Noise;
+import tink.core.Error;
 import stx.types.*;
 
 import stx.Compare.*;
@@ -7,10 +10,12 @@ import stx.Compare.*;
 import stx.Tuples.*;
 import tink.core.Error;
 import stx.async.Vouch;
-import stx.async.arrowlet.State.ArrowletState in ArrowletState;
-import stx.async.arrowlet.State.States in StateArrowlets;
+import stx.async.arrowlet.types.State in TState;
+import stx.async.arrowlet.types.Windmill in TWindmill;
 
-using stx.async.Eventual;
+import stx.async.arrowlet.types.State in TState;
+import stx.async.arrowlet.State in StateArrowlets;
+
 using stx.Options;
 using stx.async.Arrowlet;
 using stx.Compose;
@@ -18,9 +23,8 @@ using stx.Tuples;
 
 using stx.Chunk;
 
-typedef ArrowletWindmill<S,A> = ArrowletState<S,Chunk<A>>;
 
-abstract Windmill<S,A>(ArrowletWindmill<S,A>) from ArrowletWindmill<S,A> to ArrowletWindmill<S,A>{ 
+abstract Windmill<S,A>(TWindmill<S,A>) from TWindmill<S,A> to TWindmill<S,A>{ 
   static public function pure<S,A>(a:A):Windmill<S,A>{
     return function(s:S,cont:Tuple2<Chunk<A>,S>->Void){
       cont(tuple2(Val(a),s));
@@ -28,7 +32,7 @@ abstract Windmill<S,A>(ArrowletWindmill<S,A>) from ArrowletWindmill<S,A> to Arro
   }
 }
 class Windmills{
-  static public function correct<S,A>(arw:Arrowlet<Fail,A>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<A>,S>>{
+  static public function correct<S,A>(arw:Arrowlet<Error,A>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<A>,S>>{
     return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<A>,S>->Void){
       switch(tp){
         case tuple2(Val(a),s)      : cont(tuple2(Val(a),s));
@@ -41,12 +45,12 @@ class Windmills{
       }
     }
   }
-  static public function resume<S,A>(arw:Arrowlet<Unit,A>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<A>,S>>{
+  static public function resume<S,A>(arw:Arrowlet<Noise,A>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<A>,S>>{
     return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<A>,S>->Void){
       switch (tp) {
         case tuple2(Val(v),s) : cont(tuple2(Val(v),s));
         case tuple2(End(e),s) : cont(tuple2(End(e),s));
-        case tuple2(Nil,s)    : arw.withInput(Unit,
+        case tuple2(Nil,s)    : arw.withInput(Noise,
           function(a:A){
             cont(tuple2(Val(a),s));
           }
@@ -54,7 +58,7 @@ class Windmills{
       }
     }
   }
-  static public function attempt<S,A,B>(arw:Arrowlet<A,Chunk<B>>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<B>,S>>{
+  static public function access<S,A,B>(arw:Arrowlet<A,Chunk<B>>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<B>,S>>{
     return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<B>,S>->Void){
       switch (tp) {
         case tuple2(Val(v),s) : arw.withInput(v,
@@ -67,7 +71,7 @@ class Windmills{
       }
     }
   }
-  static public function editor<S,A,B>(arw:Arrowlet<A,B>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<B>,S>>{
+  static public function manage<S,A,B>(arw:Arrowlet<A,B>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<B>,S>>{
     return function(chk:Tuple2<Chunk<A>,S>,cont){
       switch(chk){
         case tuple2(Val(v),s) : arw.withInput(v,
@@ -80,7 +84,7 @@ class Windmills{
       }
     }
   }
-  static public function change<S,A>(arw0:ArrowletWindmill<S,A>,arw1:Arrowlet<Tuple2<A,S>,S>):ArrowletWindmill<S,A>{
+  static public function change<S,A>(arw0:TWindmill<S,A>,arw1:Arrowlet<Tuple2<A,S>,S>):TWindmill<S,A>{
     return function(s:S,cont:Tuple2<Chunk<A>,S>->Void){
       arw0.withInput(s,
         function(tp:Tuple2<Chunk<A>,S>){
@@ -97,7 +101,7 @@ class Windmills{
       );
     }
   }
-  static public function access<S,A,B>(arw0:ArrowletWindmill<S,A>,arw1:Arrowlet<Tuple2<A,S>,Chunk<B>>):ArrowletWindmill<S,B>{
+  static public function attempt<S,A,B>(arw0:TWindmill<S,A>,arw1:Arrowlet<Tuple2<A,S>,Chunk<B>>):TWindmill<S,B>{
     return function(s:S,cont:Tuple2<Chunk<B>,S>->Void){
       arw0.withInput(s,
         function(tp:Tuple2<Chunk<A>,S>){
