@@ -13,7 +13,7 @@ import stx.types.*;
 
 import stx.type.*;
 
-import stx.ifs.Reply;
+import stx.ifs.Value;
 
 import stx.Compare.*;
 

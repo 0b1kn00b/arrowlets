@@ -1,6 +1,8 @@
 package;
 
+using Lambda;
 using stx.async.Futures;
+
 import tink.core.Future;
 using stx.Tuples;
 

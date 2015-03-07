@@ -1,5 +1,6 @@
 package stx.async.arrowlet;
 
+import stx.types.Chunk;
 import stx.types.Tuple2;
 import tink.core.Noise;
 import tink.core.Error;
