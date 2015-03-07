@@ -62,36 +62,44 @@ using stx.Tuples;
   }
   @:from static inline public function fromFunction2<A,B,C>(fn:A->B->C):Arrowlet<Tuple2<A,B>,C>{
     //trace('fromFunction2');
-    return inline function(a:Tuple2<A,B>,b:C->Void):Void{
+    return function(a:Tuple2<A,B>,b:C->Void):Void{
       b(fn.tupled()(a));
     }
   }
   @:from static inline public function fromFunction3<A,B,C,D>(fn:A->B->C->D):Arrowlet<Tuple3<A,B,C>,D>{
     //trace('fromFunction3');
-    return inline function(a:Tuple3<A,B,C>,b:D->Void):Void{
+    return function(a:Tuple3<A,B,C>,b:D->Void):Void{
       b(fn.tupled()(a));
     }
   }
   @:from static inline public function fromFunction4<A,B,C,D,E>(fn:A->B->C->D->E):Arrowlet<Tuple4<A,B,C,D>,E>{
     //trace('fromFunction4');
-    return inline function(a:Tuple4<A,B,C,D>,b:E->Void):Void{
+    return function(a:Tuple4<A,B,C,D>,b:E->Void):Void{
       b(fn.tupled()(a));
     }
   }
   @:from static inline public function fromFunction5<A,B,C,D,E,F>(fn:A->B->C->D->E->F):Arrowlet<Tuple5<A,B,C,D,E>,F>{
     //trace('fromFunction5');
-    return inline function(a:Tuple5<A,B,C,D,E>,b:F->Void):Void{
+    return function(a:Tuple5<A,B,C,D,E>,b:F->Void):Void{
       b(fn.tupled()(a));
     }
   }
   @:from static inline public function fromStateFunction<A,B>(fn:A->Tuple2<B,A>):Arrowlet<A,Tuple2<B,A>>{
     //trace('fromStateFunction');
-    return inline function(a:A,b:Tuple2<B,A>->Void):Void{
+    return function(a:A,b:Tuple2<B,A>->Void):Void{
       b(fn(a));
     }
   }
 }
 class Arrowlets{
+  static public inline function tap<I,O>(arw:Arrowlet<I,O>,fn:O->Void){
+    return then(arw,
+      function(i,cont){
+        fn(i);
+        cont(i);
+      }
+    );
+  }
   @doc("Arrowlet application primitive. Calls Arrowlet with `i` and places result in `cont`.")
   static public inline function withInput<I,O>(arw:Arrowlet<I,O>,i:I,cont:O->Void):Void{
     arw.apply(i).handle(cont);
