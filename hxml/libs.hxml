@@ -1,4 +1,6 @@
 -lib pointwise
 -lib tink_core
--lib addendum 
--lib async
+-lib stx_addendum 
+-lib latah
+
+-lib utest
