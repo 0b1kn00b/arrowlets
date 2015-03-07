@@ -24,7 +24,20 @@ import stx.async.arrowlet.Action;
 
 class Test{
   static function main(){
-    var _ = function(x:Dynamic) {trace(x); return x;}
+    var a = new utest.Runner();
+    utest.ui.Report.create(a);
+    var arr : Array<Dynamic> = [
+      #if js
+        //new stx.async.arrowlet.js.JQueryEventTest()
+      #end
+    ];
+    arr.iter(
+      function(x){
+        a.addCase(x);
+      }
+    );
+    a.run();
+   /* var _ = function(x:Dynamic) {trace(x); return x;}
     var a = function(x:Int) return x * 2;
     var b = function(x:Int) return x + 1;
 
@@ -59,7 +72,6 @@ class Test{
             trace(x);
           }
         );
-        ft.trigger(10);
-      
+        ft.trigger(10);  */
   }
 }

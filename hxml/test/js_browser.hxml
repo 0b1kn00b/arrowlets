@@ -1,0 +1,6 @@
+-main Test
+-cp src/main/haxe
+-cp src/test/haxe
+
+
+-js test/js_browser.js
