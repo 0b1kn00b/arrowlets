@@ -11,7 +11,7 @@ using stx.Compose;
 using stx.Tuples;
 using stx.Functions;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 typedef ArrowletOption<I,O> = Arrowlet<EOption<I>,EOption<O>>
 

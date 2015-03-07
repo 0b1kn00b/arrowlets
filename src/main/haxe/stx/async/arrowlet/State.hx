@@ -12,7 +12,7 @@ import stx.Tuples.Tuples2.*;
 using stx.Tuples;
 using stx.async.Arrowlet;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 using stx.async.arrowlet.State;
 

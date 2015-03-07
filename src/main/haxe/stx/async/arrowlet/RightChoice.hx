@@ -7,7 +7,7 @@ import stx.Tuples;
 import stx.types.*;
 using stx.async.Arrowlet;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 typedef ArrowletRightChoice<B,C,D> = Arrowlet<EEither<D,B>,EEither<D,C>>;
 

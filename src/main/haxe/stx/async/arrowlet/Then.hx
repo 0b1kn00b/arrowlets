@@ -3,7 +3,7 @@ package stx.async.arrowlet;
 import tink.core.Future;
 import stx.types.*;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 using stx.async.Arrowlet;
 

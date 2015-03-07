@@ -2,7 +2,7 @@ package stx.async.arrowlet;
 
 import tink.core.Future;
 import tink.core.Callback;
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 class CallbackAnonymousArrowlet<I,O> implements IArrowlet<I,O>{
   public function new(apply:I->(O->Void)->Void){

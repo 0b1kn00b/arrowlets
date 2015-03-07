@@ -2,7 +2,7 @@ package stx.async.arrowlet;
 
 import tink.core.Future;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 class AnonymousArrowlet<I,O> implements IArrowlet<I,O>{
   public var method : I -> (O->Void) -> Void;

@@ -5,7 +5,7 @@ import stx.types.*;
 import stx.types.Tuple2;
 import stx.Tuples;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 using stx.async.Arrowlet;
 using stx.Tuples;

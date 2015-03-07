@@ -24,7 +24,7 @@ import stx.Tuples;
 import stx.Eithers;
 import stx.Options;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 import stx.async.arrowlet.*;
 import stx.async.arrowlet.Option;
 import stx.async.arrowlet.State;

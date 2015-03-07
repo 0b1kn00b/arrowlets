@@ -1,7 +1,7 @@
 package stx.async.arrowlet;
 
 import tink.core.Future;
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 class Combinator<A,B,C,D,I,O> implements IArrowlet<I,O>{
   public var fst : Arrowlet<A,B>;

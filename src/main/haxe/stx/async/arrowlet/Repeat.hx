@@ -10,7 +10,7 @@ using stx.async.Arrowlet;
 using stx.async.arrowlet.Repeat;
 using stx.Compose;
 
-import stx.async.arrowlet.ifs.Arrowlet in IArrowlet;
+import stx.async.ifs.Arrowlet in IArrowlet;
 
 typedef RepeatType<I,O> = Arrowlet<I,Free<I,O>>;
 
