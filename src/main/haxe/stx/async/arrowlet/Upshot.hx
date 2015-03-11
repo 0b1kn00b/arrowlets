@@ -1,5 +1,6 @@
 package stx.async.arrowlet;
 
+import tink.core.Callback;
 import stx.types.Tuple2;
 import stx.types.Fault;
 import tink.core.Error;
@@ -27,7 +28,7 @@ abstract Upshot<I,O>(ArrowletUpshot<I,O>) from ArrowletUpshot<I,O> to ArrowletUp
     return new Upshot();
   }
   public function new(?v:ArrowletUpshot<I,O>){
-    this = ntnl().apply(v) ? v : 
+    this = ntnl()(v) ? v : 
     function(x){
         return cast( x == null ? Failure(Error.withData('input should not be null',NullError)) : x);
     } 
@@ -36,8 +37,8 @@ abstract Upshot<I,O>(ArrowletUpshot<I,O>) from ArrowletUpshot<I,O> to ArrowletUp
 class Upshots{
   static public function attempt<I,O,N>(arw0:ArrowletUpshot<I,O>,arw1:Arrowlet<O,CUpshot<N>>):Upshot<I,N>{
     return arw0.then(
-      function(x,cont){
-        return switch (x) {
+      function(x,cont:Callback<CUpshot<N>>){
+        switch (x) {
           case Success(x) : arw1.withInput(x,cont);
           case Failure(x) : cont(Failure(x));
         }        

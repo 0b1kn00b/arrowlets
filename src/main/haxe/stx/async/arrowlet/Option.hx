@@ -5,9 +5,10 @@ import haxe.ds.Option in EOption;
 import stx.Tuples;
 import stx.types.*;
 
+using stx.Compose;
 using stx.Options;
 using stx.async.Arrowlet;
-using stx.Compose;
+
 using stx.Tuples;
 using stx.Functions;
 
@@ -28,7 +29,7 @@ class Option<I,O> implements IArrowlet<EOption<I>,EOption<O>>{
   }
 	public function apply(v:EOption<I>):Future<EOption<O>>{
     return switch (v) {
-			case Some(v) : fst.then(Some).apply(v);
+			case Some(v) : fst.then(Some).runWith(v);
       case None 	 : 
         var trg = Future.trigger();
         trg.trigger(None);

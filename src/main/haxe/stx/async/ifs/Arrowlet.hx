@@ -1,9 +1,10 @@
 package stx.async.ifs;
 
-import tink.core.Future;
-import stx.ifs.Apply;
+import tink.core.Callback;
+import stx.async.types.Future;
+
 import stx.ifs.Immix;
 
-interface Arrowlet<I,O> extends Apply<I,Future<O>>{
-  
+interface Arrowlet<I,O>{
+  public function apply(v:I):Callback<O>;
 }

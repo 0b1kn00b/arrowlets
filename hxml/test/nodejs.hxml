@@ -1,0 +1,7 @@
+-main Test
+-cp src/main/haxe
+-cp src/test/haxe
+
+-D nodejs
+-js test/nodejs.js
+-cmd node test/nodejs.js

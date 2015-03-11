@@ -27,9 +27,10 @@ class Test{
     var a = new utest.Runner();
     utest.ui.Report.create(a);
     var arr : Array<Dynamic> = [
-      #if js
+      #if (js && !nodejs)
         //new stx.async.arrowlet.js.JQueryEventTest()
       #end
+      new stx.async.arrowlet.CallableTest(),
     ];
     arr.iter(
       function(x){

@@ -1,5 +1,7 @@
 package stx.async;
 
+import stx.Functions.Codeblocks.NIL in noop;
+import stx.async.types.Future in Callback;
 import stx.async.arrowlet.types.State in TState;
 import tink.core.Callback;
 import tink.core.Future;
@@ -24,6 +26,7 @@ import stx.Tuples;
 import stx.Eithers;
 import stx.Options;
 
+import stx.async.types.Arrowlet in TArrowlet;
 import stx.async.ifs.Arrowlet in IArrowlet;
 import stx.async.arrowlet.*;
 import stx.async.arrowlet.Option;
@@ -33,7 +36,7 @@ import stx.async.arrowlet.Either;
 
 using stx.Tuples;
 
-@:forward abstract Arrowlet<I,O>(IArrowlet<I,O>) from IArrowlet<I,O> /*to ArrowletType<I,O>3*/{
+@:callable @:forward abstract Arrowlet<I,O>(TArrowlet<I,O>) from TArrowlet<I,O>{
   @doc("Externally accessible constructor.")
   static public inline function arw<A>():Arrowlet<A,A>{
     return unit();
@@ -44,12 +47,15 @@ using stx.Tuples;
   }
   @doc("Produces an arrow returning `v`.")
   @:noUsing static public function pure<A,B>(v:B):Arrowlet<A,B>{
-    return function(a:A,cont:B->Void):Void{
+    return new Arrowlet(function(a:A,cont:Callback<B>){
       cont(v);
-    }
+    });
   }
-  public function new(v:IArrowlet<I,O>){
+  public function new(v:TArrowlet<I,O>){
     this  = v;
+  }
+  @:from static inline public function fromIArrowlet<A,B>(arw:IArrowlet<A,B>):Arrowlet<A,B>{
+    return arw.apply;
   }
   @:from static inline public function fromCallbackFunction<A,B>(fn:A->(B->Void)->Void):Arrowlet<A,B>{
     return new CallbackAnonymousArrowlet(fn);
@@ -62,33 +68,33 @@ using stx.Tuples;
   }
   @:from static inline public function fromFunction2<A,B,C>(fn:A->B->C):Arrowlet<Tuple2<A,B>,C>{
     //trace('fromFunction2');
-    return function(a:Tuple2<A,B>,b:C->Void):Void{
+    return new Arrowlet(function(a:Tuple2<A,B>,b:Callback<C>){
       b(fn.tupled()(a));
-    }
+    });
   }
   @:from static inline public function fromFunction3<A,B,C,D>(fn:A->B->C->D):Arrowlet<Tuple3<A,B,C>,D>{
     //trace('fromFunction3');
-    return function(a:Tuple3<A,B,C>,b:D->Void):Void{
+    return new Arrowlet(function(a:Tuple3<A,B,C>,b:Callback<D>){
       b(fn.tupled()(a));
-    }
+    });
   }
   @:from static inline public function fromFunction4<A,B,C,D,E>(fn:A->B->C->D->E):Arrowlet<Tuple4<A,B,C,D>,E>{
     //trace('fromFunction4');
-    return function(a:Tuple4<A,B,C,D>,b:E->Void):Void{
+    return new Arrowlet(function(a:Tuple4<A,B,C,D>,b:Callback<E>){
       b(fn.tupled()(a));
-    }
+    });
   }
   @:from static inline public function fromFunction5<A,B,C,D,E,F>(fn:A->B->C->D->E->F):Arrowlet<Tuple5<A,B,C,D,E>,F>{
     //trace('fromFunction5');
-    return function(a:Tuple5<A,B,C,D,E>,b:F->Void):Void{
+    return function(a:Tuple5<A,B,C,D,E>,b:Callback<F>){
       b(fn.tupled()(a));
     }
   }
   @:from static inline public function fromStateFunction<A,B>(fn:A->Tuple2<B,A>):Arrowlet<A,Tuple2<B,A>>{
     //trace('fromStateFunction');
-    return function(a:A,b:Tuple2<B,A>->Void):Void{
+    return new Arrowlet(function(a:A,b:Callback<Tuple2<B,A>>){
       b(fn(a));
-    }
+    });
   }
 }
 class Arrowlets{
@@ -101,8 +107,8 @@ class Arrowlets{
     );
   }
   @doc("Arrowlet application primitive. Calls Arrowlet with `i` and places result in `cont`.")
-  static public inline function withInput<I,O>(arw:Arrowlet<I,O>,i:I,cont:O->Void):Void{
-    arw.apply(i).handle(cont);
+  static public inline function withInput<I,O>(arw:Arrowlet<I,O>,i:I,cont:Callback<O>){
+    arw(i,cont);
   }
   static public inline function apply<I,O>(arw:Arrowlet<I,O>,i:I):Future<O>{
     var trg       = new FutureTrigger();
@@ -113,6 +119,9 @@ class Arrowlets{
       }
     );
     return trg.asFuture();
+  }
+  static public inline function runWith<I,O>(arw:Arrowlet<I,O>,i:I):Future<O>{
+    return apply(arw,i);
   }
   @doc("left to right composition of Arrowlets. Produces an Arrowlet running `before` and placing it's value in `after`.")
   static public function then<A,B,C>(before:Arrowlet<A,B>, after:Arrowlet<B,C>):Arrowlet<A,C> { 
@@ -253,7 +262,9 @@ class FutureArrows{
   static public function then<A,B>(ft:Future<A>,then:Arrowlet<A,B>):Future<B>{
     return ft.flatMap(
       function(x:A){
-        return then.apply(x);
+        var trg = Future.trigger();
+            then(x,trg.trigger);
+        return trg.asFuture();
       }
     );
   }
