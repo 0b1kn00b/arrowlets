@@ -9,7 +9,7 @@ using stx.async.Arrowlet;
 import tink.core.Error;
 import tink.core.Noise;
 
-class Action extends ArrowletDelegate<Noise,EOption<Error>>{
+abstract class Action extends Arrowlet<Noise,EOption<Error>>{
   @:noUsing static public function unit():Action{
     return new Action(function(x:Noise,cb:EOption<Error>->Void){
       cb(None);

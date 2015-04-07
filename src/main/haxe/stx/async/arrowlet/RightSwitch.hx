@@ -9,20 +9,14 @@ import tink.core.Either;
 import stx.types.*;
 using stx.async.Arrowlet;
 
-class RightSwitch<A,B,C,D> implements IArrowlet<Either<A,B>,Either<A,D>>{
-  public var fst : Arrowlet<B,Either<A,D>>;
-
-  public function new(fst){
-    this.fst = fst;
+abstract RightSwitch<A,B,C,D>(Arrowlet<Either<A,B>,Either<A,D>>) from Arrowlet<Either<A,B>,Either<A,D>> to Arrowlet<Either<A,B>,Either<A,D>>{
+  public function new(arw:Arrowlet<B,Either<A,D>>){
+    this = Arrowlet.fromCallbackWithNoCanceller(function (i:Either<A,B>,cont:Sink<Either<A,D>>){
+      switch (i){
+        case      Left(l)      : cont(Left(l));
+        case      Right(r)     : arw(r,cont);
+      }
+    });
   }
-  public function apply(i:Either<A,B>):Future<Either<A,D>>{
-    return switch (i){
-      case      Left(l)      : 
-        var trg = Future.trigger();
-            trg.trigger(Left(l));
-            trg.asFuture();
-      case      Right(r)     : 
-        fst.apply(r);
-    }
-  }
+  
 }

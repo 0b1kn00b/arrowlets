@@ -27,14 +27,14 @@ using stx.Chunk;
 
 abstract Windmill<S,A>(TWindmill<S,A>) from TWindmill<S,A> to TWindmill<S,A>{ 
   static public function pure<S,A>(a:A):Windmill<S,A>{
-    return function(s:S,cont:Tuple2<Chunk<A>,S>->Void){
+    return function(s:S,cont:Tuple2<Chunk<A>,S>->Void):Void{
       cont(tuple2(Val(a),s));
     }
   }
 }
 class Windmills{
   static public function correct<S,A>(arw:Arrowlet<Error,A>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<A>,S>>{
-    return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<A>,S>->Void){
+    return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<A>,S>->Void):Void{
       switch(tp){
         case tuple2(Val(a),s)      : cont(tuple2(Val(a),s));
         case tuple2(Nil,s)         : cont(tuple2(Nil,s));
@@ -47,7 +47,7 @@ class Windmills{
     }
   }
   static public function resume<S,A>(arw:Arrowlet<Noise,A>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<A>,S>>{
-    return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<A>,S>->Void){
+    return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<A>,S>->Void):Void{
       switch (tp) {
         case tuple2(Val(v),s) : cont(tuple2(Val(v),s));
         case tuple2(End(e),s) : cont(tuple2(End(e),s));
@@ -60,7 +60,7 @@ class Windmills{
     }
   }
   static public function access<S,A,B>(arw:Arrowlet<A,Chunk<B>>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<B>,S>>{
-    return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<B>,S>->Void){
+    return function(tp:Tuple2<Chunk<A>,S>,cont:Tuple2<Chunk<B>,S>->Void):Void{
       switch (tp) {
         case tuple2(Val(v),s) : arw.withInput(v,
           function(chk:Chunk<B>){
@@ -73,7 +73,7 @@ class Windmills{
     }
   }
   static public function manage<S,A,B>(arw:Arrowlet<A,B>):Arrowlet<Tuple2<Chunk<A>,S>,Tuple2<Chunk<B>,S>>{
-    return function(chk:Tuple2<Chunk<A>,S>,cont){
+    return function(chk:Tuple2<Chunk<A>,S>,cont):Void{
       switch(chk){
         case tuple2(Val(v),s) : arw.withInput(v,
           function(v){
@@ -86,7 +86,7 @@ class Windmills{
     }
   }
   static public function change<S,A>(arw0:TWindmill<S,A>,arw1:Arrowlet<Tuple2<A,S>,S>):TWindmill<S,A>{
-    return function(s:S,cont:Tuple2<Chunk<A>,S>->Void){
+    return function(s:S,cont:Tuple2<Chunk<A>,S>->Void):Void{
       arw0.withInput(s,
         function(tp:Tuple2<Chunk<A>,S>){
           switch (tp) {
@@ -103,7 +103,7 @@ class Windmills{
     }
   }
   static public function attempt<S,A,B>(arw0:TWindmill<S,A>,arw1:Arrowlet<Tuple2<A,S>,Chunk<B>>):TWindmill<S,B>{
-    return function(s:S,cont:Tuple2<Chunk<B>,S>->Void){
+    return function(s:S,cont:Tuple2<Chunk<B>,S>->Void):Void{
       arw0.withInput(s,
         function(tp:Tuple2<Chunk<A>,S>){
           switch (tp) {

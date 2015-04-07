@@ -16,40 +16,54 @@ import stx.Eithers;
 
 using stx.async.Arrowlet;
 
-import stx.types.Upshot in CUpshot;
+import stx.types.Upshot in CTUpshot;
+import stx.Upshot in CUpshot;
 
-typedef ArrowletUpshot<I,O> = Arrowlet<CUpshot<I>,CUpshot<O>>
+import stx.async.arrowlet.types.Upshot in TUpshot;
+import stx.async.arrowlet.types.Upshot.RootUpshot;
+import stx.async.arrowlet.types.Upshot.Upshot1;
 
-abstract Upshot<I,O>(ArrowletUpshot<I,O>) from ArrowletUpshot<I,O> to ArrowletUpshot<I,O>{
-  static public function outcome<I,O>(?v:ArrowletUpshot<I,O>):Upshot<I,O>{
+@:forward @:callable abstract Upshot<I,O>(TUpshot<I,O>) from TUpshot<I,O> to TUpshot<I,O> from RootUpshot<I,O> from Upshot1<I,O>{
+  static public function outcome<I,O>(?v:TUpshot<I,O>):Upshot<I,O>{
     return new Upshot(v);
   }
-  static public function unit<I,O>():Upshot<I,O>{
-    return new Upshot();
+  //@:from static inline public function fromArrowlet()
+  @:from static inline public function fromCallbackWithNoCanceller<A,B>(fn:CTUpshot<A> -> Sink<CTUpshot<B>> -> Void):Upshot<A,B>{
+    return new Upshot(Arrowlet.fromCallbackWithNoCanceller(function(i:CTUpshot<A>,cont:Sink<CTUpshot<B>>):Block{
+      var cancelled = false;
+
+      if(!cancelled){
+        fn(i,
+          function(o){
+            if(!cancelled){
+              cont(o);
+            }
+          }
+        );
+      }
+      return function(){
+        cancelled = true;
+      }
+    }));
   }
-  public function new(?v:ArrowletUpshot<I,O>){
-    this = ntnl()(v) ? v : 
-    function(x){
-        return cast( x == null ? Failure(Error.withData('input should not be null',NullError)) : x);
-    } 
+  public function new(v:TUpshot<I,O>){
+    this = v;
   }
 }
 class Upshots{
-  static public function attempt<I,O,N>(arw0:ArrowletUpshot<I,O>,arw1:Arrowlet<O,CUpshot<N>>):Upshot<I,N>{
-    return arw0.then(
-      function(x,cont:Callback<CUpshot<N>>){
-        switch (x) {
-          case Success(x) : arw1.withInput(x,cont);
-          case Failure(x) : cont(Failure(x));
-        }        
-      }
-    );
+  static public function attempt<I,O,N>(arw0:TUpshot<I,O>,arw1:Arrowlet<O,CUpshot<N>>):Upshot<I,N>{
+    function arwN(x:CUpshot<O>,cont:Sink<CUpshot<N>>){
+      switch (x) {
+        case Success(x) : arw1(x,cont);
+        case Failure(x) : cont(Failure(x));
+      }        
+    }
+    return arw0.then(arwN);
   }
-  static public function edit<I,O,N>(arw0:ArrowletUpshot<I,O>,arw1:Arrowlet<O,N>):Upshot<I,N>{
-    return arw0.then(
-      function(x,cont){
+  static public function edit<I,O,N>(arw0:TUpshot<I,O>,arw1:Arrowlet<O,N>):Upshot<I,N>{
+    function arwN(x:CUpshot<O>,cont:Sink<CUpshot<N>>){
         switch (x) {
-          case Success(v) : arw1.withInput(v,
+          case Success(v) : arw1(v,
             function(x){
               cont(Success(x));
             }
@@ -57,11 +71,11 @@ class Upshots{
           case Failure(v) : cont(Failure(v));
         }
       }
-    );
+    return arw0.then(arwN);
   }
-  static public function split<I,O,N>(arw0:ArrowletUpshot<I,O>,arw1:Upshot<I,N>):Upshot<I,Tuple2<O,N>>{
+  static public function split<I,O,N>(arw0:TUpshot<I,O>,arw1:Upshot<I,N>):Upshot<I,Tuple2<O,N>>{
     return arw0.split(arw1).then(
-      function(tp,cont){
+      function(tp,cont:Sink<CUpshot<Tuple2<O,N>>>):Void{
         switch (tp) {
           case tuple2(Success(v),Failure(v1)) : cont(Failure(v1));
           case tuple2(Failure(v),Success(v1)) : cont(Failure(v));
@@ -71,7 +85,7 @@ class Upshots{
       }
     );
   }
-  static public function imply<I,O>(arw0:ArrowletUpshot<I,O>,v:I){
+  static public function imply<I,O>(arw0:TUpshot<I,O>,v:I){
     return arw0.apply(Success(v));
   }
 }

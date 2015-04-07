@@ -1,17 +1,15 @@
 package stx.async.arrowlet;
 
+import stx.types.Sink;
 import tink.core.Future;
 
 import stx.async.ifs.Arrowlet in IArrowlet;
 
-class Unit<I> implements IArrowlet<I,I>{
+abstract Unit<I>(Arrowlet<I,I>) from Arrowlet<I,I> to Arrowlet<I,I>{
   public function new(){
-
+    this = function(v:I,cont:Sink<I>){
+      cont(v);
+      return function(){}
+    }
   }
-  public function apply(v:I):Future<I>{
-    var ft = Future.trigger();
-        ft.trigger(v);
-    return ft.asFuture();
-  }
-
 }

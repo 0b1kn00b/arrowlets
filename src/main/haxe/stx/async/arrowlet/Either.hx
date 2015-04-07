@@ -1,5 +1,6 @@
 package stx.async.arrowlet;
 
+import haxe.ds.Option;
 import tink.core.Future;
 import stx.types.*;
 import stx.types.Tuple2;
@@ -10,43 +11,39 @@ import stx.async.ifs.Arrowlet in IArrowlet;
 using stx.async.Arrowlet;
 using stx.Tuples;
 
-class Either<I,O> extends Combinator<I,O,I,O,I,O>{
-	override public function apply(v:I):Future<O>{
-		var out = Future.trigger();
-		var done = false;
-		var a_0 : FutureTrigger<O>	= null;
-		var b_0 : FutureTrigger<O>	= null;
-
-		var a_1 : Future<Tuple2<Future<O>,O>>= null;
-		var b_1 : Future<Tuple2<Future<O>,O>>= null;
-
-		var handler 
-			= function(f:Future<O>,o:O):Void{
-					if(!done){
-						done = true;
-						//trace('either done');
-						out.trigger(o);
+abstract Either<I,O>(Arrowlet<I,O>) from Arrowlet<I,O> to Arrowlet<I,O>{
+	public function new(l:Arrowlet<I,O>,r:Arrowlet<I,O>){
+		this = function(v:I,cont:Sink<O>){
+			var out 	= None;
+			var c0 : Block, c1 : Block = null;
+			c0  = l(v,
+				function(x){
+					if(out == None){
+						out = Some(v);
 					}
-				}.tupled();
-
-		a_0 = new FutureTrigger();
-		fst.withInput(v,
-			function(x){
-				a_0.trigger(x);
+					if(c1!=null){
+						c1();
+					}
+				}
+			);
+			c1  = r(v,
+				function(x){
+					if(out == None){
+						out = Some(v);
+					}
+					if(c0!=null){
+						c0();
+					}
+				}
+			);
+			return function(){
+				if(c0!=null){
+					c0();
+				}
+				if(c1!=null){
+					c1();
+				}
 			}
-		);
-		b_0 = new FutureTrigger();
-		snd.withInput(v,
-			function(x){
-				b_0.trigger(x);
-			}
-		);
-
-		a_1 = a_0.asFuture().map(function(x) return tuple2(a_0.asFuture(),x));
-		a_1.handle(handler);
-		b_1 = b_0.asFuture().map(function(x) return tuple2(b_0.asFuture(),x));
-		b_1.handle(handler);
-
-		return out;
+		};
 	}
 }

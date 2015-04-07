@@ -14,26 +14,15 @@ using stx.Functions;
 
 import stx.async.ifs.Arrowlet in IArrowlet;
 
-typedef ArrowletOption<I,O> = Arrowlet<EOption<I>,EOption<O>>
+import stx.async.arrowlet.types.Option in TOption;
 
-class Option<I,O> implements IArrowlet<EOption<I>,EOption<O>>{
-  public var fst : Arrowlet<I,O>;
-  public function new(fst){
-    this.fst = fst;
+@:callable abstract Option<I,O>(TOption<I,O>) from TOption<I,O> to TOption<I,O>{
+  public function new(arw:Arrowlet<I,O>){
+    this = Arrowlet.fromCallbackWithNoCanceller(function(v:EOption<I>,cont:Sink<EOption<O>>){
+      switch (v) {
+        case Some(v) : arw.then(Some)(v,cont);
+        case None    : cont(None);
+      }
+    });
   }
-	@:noUsing static public function unit<I>():Option<I,I>{
-		return new Option(Arrowlet.unit());
-	}
-  @:noUsing static public function pure<I,O>(arw:Arrowlet<I,O>):Option<I,O>{
-    return new Option(arw);
-  }
-	public function apply(v:EOption<I>):Future<EOption<O>>{
-    return switch (v) {
-			case Some(v) : fst.then(Some).runWith(v);
-      case None 	 : 
-        var trg = Future.trigger();
-        trg.trigger(None);
-        trg.asFuture();
-		}
-	}
 }

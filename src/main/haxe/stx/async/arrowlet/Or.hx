@@ -6,11 +6,14 @@ import stx.types.*;
 
 using stx.async.Arrowlet;
 
-class Or<L, R, R0> extends Combinator<L,R0,R,R0,EEither<L,R>,R0>{
-	override public function apply(i: EEither<L,R>):Future<R0>{
-		return switch (i) {
-			case Left(v) 	: fst.apply(v);
-			case Right(v)	: snd.apply(v);
-		}
-	}
+
+abstract Or<L, R, R0>(Arrowlet<EEither<L,R>,R0>) from Arrowlet<EEither<L,R>,R0> to Arrowlet<EEither<L,R>,R0>{
+  public function new(l:Arrowlet<L,R0>,r:Arrowlet<R,R0>){
+    this = Arrowlet.fromCallbackWithNoCanceller(function(i:EEither<L,R>,cont:R0->Void){
+      switch (i) {
+        case Left(v)  : l(v,cont);
+        case Right(v) : r(v,cont);
+      }
+    });
+  }
 }

@@ -13,11 +13,12 @@ import stx.Tuples;
 typedef AAIn<I,O> 			= Tuple2<Arrowlet<I,O>,I>;
 typedef TApply<I,O> 		= Arrowlet<AAIn<I,O>,O>;
 
-class Apply<I,O> implements IArrowlet<AAIn<I,O>,O>{
+@:callable abstract Apply<I,O>(Arrowlet<AAIn<I,O>,O>) from Arrowlet<AAIn<I,O>,O> to Arrowlet<AAIn<I,O>,O>{
 	public function new(){
-
-	}
-	public function apply(v:Tuple2<Arrowlet<I,O>,I>):Future<O>{
-		return v.fst().apply(v.snd());
+    this = Arrowlet.fromCallbackWithNoCanceller(
+      function(v:Tuple2<Arrowlet<I,O>,I>,cont:Sink<O>){
+        v.fst()(v.snd(),cont);
+      }
+    );
 	}
 }

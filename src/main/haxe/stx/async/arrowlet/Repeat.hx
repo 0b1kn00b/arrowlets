@@ -12,23 +12,37 @@ using stx.Compose;
 
 import stx.async.ifs.Arrowlet in IArrowlet;
 
-typedef RepeatType<I,O> = Arrowlet<I,Free<I,O>>;
+import stx.async.arrowlet.types.Repeat in TRepeat;
 
-class Repeat<I,O> implements IArrowlet<I,O>{
-	public var fst : Arrowlet<I,Free<I,O>>;
-	public function new(fst){
-		this.fst = fst;
-	}
-	public function apply(v:I):Future<O>{
-		var ft = Future.trigger();
-		function withRes(res: Free<I, O> ) {
-			switch (res) {
-				case Cont(rv): fst.withInput(rv, cast withRes#if (flash || js).trampoline()#end); //  break this recursion!
-				case Done(dv): ft.trigger(dv);
+abstract Repeat<I,O>(Arrowlet<I,O>) from Arrowlet<I,O> to Arrowlet<I,O>{
+	public function new(arw:TRepeat<I,O>){
+		this = function(v:I,cont:Sink<O>){
+			var cancelled = false;
+			arw(v,
+				function rec(o){
+					if(!cancelled){
+						switch (o) {
+							case Cont(rv) : arw(rv,cast rec#if (flash || js).trampoline()#end);
+							case Done(dn) : cont(dn);
+						}
+					}
+				}
+			);
+			return function(){
+				cancelled = true;
 			}
 		}
-		fst.apply(v);
-		return ft;
+	}
+	static public function collect<I,O,Z>(arw:Arrowlet<I,O>,selector:O->Bool,fold:Z->O->Z,init:Z):Arrowlet<I,Z>{
+		var op = init;
+		return arw.tie(
+			function(i:I,o:O){
+				return switch (selector(o)) {
+					case true 	: op = fold(op,o); 		Cont(i);
+					case false  : 										Done(op);
+				}
+			}.tupled()
+		).repeat();
 	}
 }
 class Repeats{
@@ -49,16 +63,4 @@ class Repeats{
 			}
 	}
 	#end
-
-	static public function collect<I,O,Z>(arw:Arrowlet<I,O>,selector:O->Bool,fold:Z->O->Z,init:Z):Arrowlet<I,Z>{
-		var op = init;
-		return arw.tie(
-			function(i:I,o:O){
-				return switch (selector(o)) {
-					case true 	: op = fold(op,o); 		Cont(i);
-					case false  : 										Done(op);
-				}
-			}.tupled()
-		).repeat();
-	}
 }

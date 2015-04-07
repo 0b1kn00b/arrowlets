@@ -10,21 +10,19 @@ using stx.async.Arrowlet;
 
 import stx.async.ifs.Arrowlet in IArrowlet;
 
-typedef ArrowletLeftChoice<B,C,D> = Arrowlet<EEither<B,D>,EEither<C,D>>
+import stx.async.arrowlet.types.LeftChoice in TLeftChoice;
 
-class LeftChoice<B,C,D> implements IArrowlet<EEither<B,D>,EEither<C,D>>{
-	public var fst : Arrowlet<B,C>;
-	public function new(fst){
-		this.fst = fst;
-	}
-	public function apply(i: EEither<B,D>):Future<EEither<C,D>>{
-		return switch (i) {
-			case Left(v) 	:
-				new Apply().then(Left).apply(tuple2(fst,v));
-			case Right(v) :
-			 	var trg = Future.trigger();
-				trg.trigger(Right(v));
-				return trg.asFuture();
-		}
+abstract LeftChoice<B,C,D>(TLeftChoice<B,C,D>) from TLeftChoice<B,C,D> to TLeftChoice<B,C,D>{
+	public function new(arw:Arrowlet<B,C>){
+		this = Arrowlet.fromCallbackWithNoCanceller(
+			function(v:EEither<B,D>,cont:Sink<EEither<C,D>>){
+				switch (v) {
+					case Left(v) 	:
+						new Apply().then(Left)(tuple2(arw,v),cont);
+					case Right(v) :
+						cont(Right(v));
+				}
+			}
+		);
 	}
 }

@@ -8,6 +8,6 @@ class CallableTest{
   }
   public function testForward(){
     var v : Arrowlet<Int,Int> = function(x) {return x;};
-    v(3);
+    v(3,haxe.Log.trace.bind(_,null));
   }
 }

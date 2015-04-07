@@ -20,7 +20,7 @@ import stx.async.arrowlet.Then;
 import stx.async.arrowlet.Upshot;
 import stx.async.arrowlet.Windmill;
 
-import stx.async.arrowlet.Action;
+//import stx.async.arrowlet.Action;
 
 class Test{
   static function main(){
