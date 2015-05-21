@@ -1,0 +1,3389 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Arro",
+				"Arrowlets	class"
+			],
+			[
+				"UP",
+				"Upshot1"
+			],
+			[
+				"Righ",
+				"RightChoice	class"
+			],
+			[
+				"Ri",
+				"RightChoice	class"
+			],
+			[
+				"Left",
+				"LeftChoice	class"
+			],
+			[
+				"fromCallba",
+				"fromCallbackWithNoCanceller(...)	Unknown<0>"
+			],
+			[
+				"can",
+				"canceller	var"
+			],
+			[
+				"cla",
+				"class	class"
+			],
+			[
+				"tr",
+				"trigger"
+			],
+			[
+				"regist",
+				"registerArrowlet"
+			],
+			[
+				"Ano",
+				"AnonymousArrowlet"
+			],
+			[
+				"arr",
+				"arrowlet"
+			],
+			[
+				"Arrow",
+				"Arrowlet	class"
+			],
+			[
+				"ti",
+				"trigger"
+			],
+			[
+				"han",
+				"handle"
+			],
+			[
+				"e",
+				"extends"
+			],
+			[
+				"Con",
+				"Combinator"
+			],
+			[
+				"Com",
+				"Combinator"
+			],
+			[
+				"COm",
+				"Combinator"
+			],
+			[
+				"I",
+				"IArrowlet"
+			],
+			[
+				"Arr",
+				"Arrowlet"
+			],
+			[
+				"Act",
+				"ActionArrowletType"
+			],
+			[
+				"ha",
+				"haxelib.json	haxelib.json"
+			],
+			[
+				"Tupl",
+				"Tuple2"
+			],
+			[
+				"s",
+				"switch	switch"
+			],
+			[
+				"CU",
+				"CUpshot"
+			],
+			[
+				"callb",
+				"callback"
+			],
+			[
+				"swf",
+				"swf-version"
+			],
+			[
+				"tink_",
+				"tink_core [1.0.0-rc.2]"
+			],
+			[
+				"Tuple",
+				"Tuple5Hash"
+			],
+			[
+				"Tuple3",
+				"Tuple3Hash"
+			],
+			[
+				"Tuple2",
+				"Tuple2Hash"
+			],
+			[
+				"hash",
+				"hashCode"
+			],
+			[
+				"Pro",
+				"ProductHash"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"Laz",
+				"LazyListInstance"
+			],
+			[
+				"La",
+				"LazyListInstance"
+			],
+			[
+				"obs",
+				"observable"
+			],
+			[
+				"Par",
+				"PartialFunctions	class"
+			],
+			[
+				"PF",
+				"PFMethod	class"
+			],
+			[
+				"Pa",
+				"PartialFunctionType	class"
+			],
+			[
+				"_",
+				"_withInput"
+			],
+			[
+				"wi",
+				"_withInput"
+			],
+			[
+				"get",
+				"_getter"
+			],
+			[
+				"te",
+				"test_case	Muster TestCase"
+			],
+			[
+				"pre",
+				"Predicate"
+			],
+			[
+				"Loader",
+				"LoaderConfig	class"
+			],
+			[
+				"__",
+				"__triggers__"
+			],
+			[
+				"Ob",
+				"Observer"
+			],
+			[
+				"tag",
+				"tag_behaviours	var"
+			],
+			[
+				"Obje",
+				"ObjectMeta	class"
+			],
+			[
+				"beha",
+				"behaviour"
+			],
+			[
+				"o",
+				"object_defs"
+			],
+			[
+				"eni",
+				"engine"
+			],
+			[
+				"Engine",
+				"PokeEngine"
+			],
+			[
+				"com",
+				"component"
+			],
+			[
+				"Class",
+				"ClassBehaviour"
+			],
+			[
+				"class",
+				"class_name	var"
+			],
+			[
+				"inter",
+				"interests	function"
+			],
+			[
+				"be",
+				"behaviours	var"
+			],
+			[
+				"Obj",
+				"ObjectMap"
+			],
+			[
+				"Build",
+				"Buildable"
+			],
+			[
+				"En",
+				"EntityType"
+			],
+			[
+				"re",
+				"removed"
+			],
+			[
+				"en",
+				"entities"
+			],
+			[
+				"rem",
+				"removed"
+			],
+			[
+				"Ene",
+				"EntitySystem"
+			],
+			[
+				"TEst",
+				"TestComponent"
+			],
+			[
+				"test",
+				"test_case	Muster TestCase"
+			],
+			[
+				"Rea",
+				"ReactiveComponentType"
+			],
+			[
+				"Ent",
+				"EntityType"
+			],
+			[
+				"Arrowl",
+				"ArrowletCrank"
+			],
+			[
+				"Arrw",
+				"ArrowletTest"
+			],
+			[
+				"with",
+				"withInput"
+			],
+			[
+				"wit",
+				"withInput"
+			],
+			[
+				"ch",
+				"chunk	chunk"
+			],
+			[
+				"tuple",
+				"tupled"
+			],
+			[
+				"Ev",
+				"EventualTest"
+			],
+			[
+				"on",
+				"onSuccess"
+			],
+			[
+				"Me",
+				"MethodTest"
+			],
+			[
+				"t",
+				"toArray"
+			],
+			[
+				"Ha",
+				"HashTest"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"Comp",
+				"ComponentType"
+			],
+			[
+				"testCa",
+				"TestCase"
+			],
+			[
+				"compo",
+				"component"
+			],
+			[
+				"test_",
+				"test_component"
+			],
+			[
+				"Compo",
+				"ComponentType"
+			],
+			[
+				"comp",
+				"component_map"
+			],
+			[
+				"Entity",
+				"EntityType"
+			],
+			[
+				"DEfa",
+				"DefaultEventManager"
+			],
+			[
+				"Def",
+				"DefaultEvent"
+			],
+			[
+				"hadnler",
+				"handlers"
+			],
+			[
+				"H",
+				"HandlerType"
+			],
+			[
+				"sign",
+				"signal_for"
+			],
+			[
+				"In",
+				"IntMap"
+			],
+			[
+				"Defe",
+				"DefaultEventManager"
+			],
+			[
+				"Strin",
+				"StringMap"
+			],
+			[
+				"COmpo",
+				"ComponentType"
+			],
+			[
+				"add",
+				"addChild"
+			],
+			[
+				"String",
+				"Stringifies"
+			],
+			[
+				"STr",
+				"String"
+			],
+			[
+				"iter",
+				"iterator	var"
+			],
+			[
+				"err",
+				"error_stack	var"
+			],
+			[
+				"Stringi",
+				"StringifyType"
+			],
+			[
+				"Si",
+				"SignalType	class"
+			],
+			[
+				"Sig",
+				"Signals	class"
+			],
+			[
+				"Signal",
+				"SignalType	class"
+			],
+			[
+				"Diso",
+				"Dissolvable"
+			],
+			[
+				"Tet",
+				"TestResult"
+			],
+			[
+				"St",
+				"StackItems"
+			],
+			[
+				"sour",
+				"source1"
+			],
+			[
+				"Obser",
+				"Observable"
+			],
+			[
+				"Test",
+				"TestResult"
+			],
+			[
+				"sourc",
+				"source1"
+			],
+			[
+				"Obs",
+				"Observable"
+			],
+			[
+				"wrt",
+				"writeString"
+			],
+			[
+				"writ",
+				"writeString"
+			],
+			[
+				"r",
+				"reply"
+			],
+			[
+				"Observab",
+				"Observables"
+			],
+			[
+				"bind",
+				"bindFold"
+			],
+			[
+				"del",
+				"deliver	function"
+			],
+			[
+				"canl",
+				"cancel_stack	var"
+			],
+			[
+				"Po",
+				"PosInfos"
+			],
+			[
+				"_on",
+				"_onData	function"
+			],
+			[
+				"_n",
+				"_onDone"
+			],
+			[
+				"_o",
+				"_onData"
+			],
+			[
+				"ca",
+				"cancelled	var"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Upshot.hx",
+			"settings":
+			{
+				"buffer_size": 2710,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/types/Upshot.hx",
+			"settings":
+			{
+				"buffer_size": 318,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/Arrowlet.hx",
+			"settings":
+			{
+				"buffer_size": 10960,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Windmill.hx",
+			"settings":
+			{
+				"buffer_size": 3853,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/test/haxe/Test.hx",
+			"settings":
+			{
+				"buffer_size": 1664,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/types/RightChoice.hx",
+			"settings":
+			{
+				"buffer_size": 163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Apply.hx",
+			"settings":
+			{
+				"buffer_size": 567,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/types/LeftChoice.hx",
+			"settings":
+			{
+				"buffer_size": 162,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Repeat.hx",
+			"settings":
+			{
+				"buffer_size": 1378,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/types/Repeat.hx",
+			"settings":
+			{
+				"buffer_size": 130,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Unit.hx",
+			"settings":
+			{
+				"buffer_size": 308,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx",
+			"settings":
+			{
+				"buffer_size": 425,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Or.hx",
+			"settings":
+			{
+				"buffer_size": 505,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Pair.hx",
+			"settings":
+			{
+				"buffer_size": 1815,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/types/Pair.hx",
+			"settings":
+			{
+				"buffer_size": 122,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main/haxe/stx/async/arrowlet/Either.hx",
+			"settings":
+			{
+				"buffer_size": 823,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Haxe/Support/Hxml.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"edi",
+				"Project: Edit"
+			],
+			[
+				"",
+				"Build: Titanium"
+			],
+			[
+				"ed",
+				"Project: Edit"
+			],
+			[
+				"stp",
+				"STProjectMaker: Create project"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"stpr",
+				"STProjectMaker: Create project"
+			],
+			[
+				"smp",
+				"STProjectMaker: Create project"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"bros",
+				"SFTP: Browse Server…"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packagere",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"set",
+				"Set Syntax: Hxml"
+			],
+			[
+				"ug",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"p",
+				"Package Control: Enable Package"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"m",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"mark",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"proje",
+				"STProjectMaker: Create project"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"o",
+				"Origami: Destroy Pane Below"
+			],
+			[
+				"or",
+				"Origami: Focus on Pane Below"
+			],
+			[
+				"orig",
+				"Origami: Create Pane Below"
+			],
+			[
+				"jslin",
+				"JSLint: Run JSLint"
+			],
+			[
+				"jsli",
+				"JSLint: Run JSLint"
+			],
+			[
+				"jsl",
+				"JSLint: Run JSLint"
+			],
+			[
+				"jslint",
+				"JSLint: Run JSLint"
+			],
+			[
+				"j",
+				"JSLint: Run JSLint"
+			],
+			[
+				"js",
+				"JSLint: Show JSLint Result"
+			],
+			[
+				"JSL",
+				"JSLint: Run JSLint"
+			],
+			[
+				"JSli",
+				"JSLint: Run JSLint"
+			],
+			[
+				"ja",
+				"Set Syntax: Jade"
+			],
+			[
+				"pack	",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"x",
+				"Set Syntax: XML"
+			],
+			[
+				"xm",
+				"Set Syntax: XML"
+			],
+			[
+				"packa	",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"INS",
+				"Package Control: Install Package"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			],
+			[
+				"bin",
+				"Preferences: Global Settings - User"
+			]
+		],
+		"width": 254.0
+	},
+	"console":
+	{
+		"height": 205.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/dayz/prj/haxe/arrowlets",
+		"/home/dayz/prj/haxe/arrowlets/src",
+		"/home/dayz/prj/haxe/arrowlets/src/main",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/types",
+		"/home/dayz/prj/haxe/latah/src/main/haxe",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx"
+	],
+	"file_history":
+	[
+		"/home/dayz/prj/haxe/haxe/std/haxe/Http.hx",
+		"/home/dayz/prj/haxe/haxe/std/haxe/remoting/HttpConnection.hx",
+		"/home/dayz/prj/haxe/arrowlets/haxelib.bat",
+		"/home/dayz/prj/haxe/haxe/std/flash/errors/TypeError.hx",
+		"/home/dayz/prj/haxe/haxe/std/Type.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/ifs/Arrowlet.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Apply.hx",
+		"/home/dayz/prj/haxe/pointwise/src/main/haxe/stx/types/Sink.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/ifs/Sink.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/utils/SetIntervalTimer.hx",
+		"/home/dayz/prj/haxe/haxe/std/Std.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/RightChoice.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/RightSwitch.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/test/haxe/Test.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/Arrowlet.hx",
+		"/home/dayz/prj/haxe/arrowlets/arrowlets.sublime-project",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Option.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Then.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/test/haxe/stx/async/arrowlet/CallableTest.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/types/Option.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Action",
+		"/home/dayz/prj/haxe/haxe/std/js/html/MediaRecorderOptions.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Options.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/types/Option.hx",
+		"/home/dayz/haxelib/tink_core/1,0,0-rc,7/README.md",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/LeftChoice.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/rtc/IceGatheringState.hx",
+		"/home/dayz/prj/haxe/haxe/std/python/lib/io/RawIOBase.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/ifs/Apply.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/net/FileFilter.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/LinkElement.hx",
+		"/home/dayz/prj/haxe/arrowlets/hxml/libs.hxml",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/types/Free.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/FrameElement.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/net/FileReference.hx",
+		"/home/dayz/haxelib/tink_core/1,0,0-rc,7/src/tink/core/Future.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/types/Repeat.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/events/GesturePhase.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Repeat.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/RegExp.hx",
+		"/home/dayz/haxelib/tink_core/1,0,0-rc,7/src/tink/core/Pair.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/svg/TextPathElement.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/PluginArray.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Pairs.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/types/Arrowlet.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/types/Pair.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/PaintRequest.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Either.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Combinator.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Tuple2.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/types/Partial.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/types/Upshot.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/svg/UnitTypes.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/errors/UninitializedError.hx",
+		"/home/dayz/prj/haxe/haxe/std/haxe/Unserializer.hx",
+		"/home/dayz/prj/haxe/haxe/std/UInt.hx",
+		"/home/dayz/prj/haxe/pointwise/src/main/haxe/stx/Functions.hx",
+		"/home/dayz/prj/haxe/haxe/std/sys/FileSystem.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/FileReaderSync.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/Task.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/events/OutputProgressEvent.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Objects.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Cancellable.hx",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx/async/types/Tie.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/TimeElement.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/TextInteractionMode.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/types/Answer.hx",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx/async/types/Future.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/jquery-latest.min.js",
+		"/home/dayz/prj/haxe/haxe/std/Lambda.hx",
+		"/home/dayz/prj/haxe/haxe/std/haxe/io/ArrayBufferView.hx",
+		"/home/dayz/prj/haxe/arrowlets/test/index.html",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx/async/types/Link.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Unit.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/CallbackAnonymousArrowlet.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Upshot.hx",
+		"/home/dayz/prj/haxe/arrowlets/build.hxml",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/State.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Apply.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/ArrowletDelegate.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Action.hx",
+		"/home/dayz/prj/haxe/pointwise/src/main/haxe/stx/Compose.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/main/haxe/stx/async/arrowlet/Windmill.hx",
+		"/home/dayz/haxelib/tink_core/1,0,0-rc,7/src/tink/core/Callback.hx",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx/async/Continuation.hx",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx/async/types/Continuation.hx",
+		"/home/dayz/prj/haxe/arrowlets/src/test/haxe/stx/async/arrowlet/js/JQueryEventTest.hx",
+		"/home/dayz/prj/haxe/lib/tink_core/1,0,0-rc,7/src/tink/core/Callback.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/errors/URIError.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/svg/TextContentElement.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash8/NetConnection.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/TextColorType.hx",
+		"/home/dayz/prj/haxe/haxe/std/haxe/unit/TestCase.hx",
+		"/home/dayz/prj/haxe/haxe/std/haxe/Constraints.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/engine/TextLineCreationResult.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/AntiAliasType.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/ime/CompositionAttributeRange.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/Int8Array.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/engine/JustificationStyle.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/text/engine/LineJustification.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/net/NetStreamMulticastInfo.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/_std/haxe/ds/UnsafeStringMap.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Compare.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/CreateFileOptions.hx",
+		"/home/dayz/prj/haxe/haxe/std/Class.hx",
+		"/home/dayz/prj/haxe/haxe/std/cpp/Pointer.hx",
+		"/home/dayz/prj/haxe/haxe/std/haxe/PosInfos.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/PositionOptions.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/CompositionEvent.hx",
+		"/home/dayz/prj/haxe/lib/tink_core/1,0,0-rc,7/src/tink/core/Future.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/system/SystemUpdaterType.hx",
+		"/home/dayz/prj/haxe/haxe/std/cpp/FastIterator.hx",
+		"/home/dayz/prj/haxe/haxe/std/sys/io/FileInput.hx",
+		"/home/dayz/prj/haxe/haxe/std/sys/io/FileOutput.hx",
+		"/home/dayz/prj/haxe/addendum/src/main/haxe/stx/Callbacks.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/MimeTypeArray.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/TableRowElement.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/RequestFullscreenOptions.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash8/TextField.hx",
+		"/home/dayz/prj/haxe/latah/src/main/haxe/stx/async/types/Block.hx",
+		"/home/dayz/prj/haxe/haxe/std/python/lib/io/TextIOWrapper.hx",
+		"/home/dayz/prj/haxe/haxe/std/js/html/CSSRuleList.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash8/MovieClipLoader.hx",
+		"/home/dayz/prj/haxe/haxe/std/python/io/IoTools.hx",
+		"/home/dayz/prj/haxe/haxe/std/sys/io/FileSeek.hx",
+		"/home/dayz/prj/haxe/haxe/std/flash/display/IGraphicsFill.hx"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/home/dayz/prj/haxe/arrowlets",
+			"C:\\world\\prj\\haxe\\lib\\tink_core\\1,0,0-rc,6",
+			"C:\\world\\prj\\haxe\\haxe\\std",
+			"C:\\world\\prj\\neko\\neko",
+			"C:\\world\\prj\\haxe\\stax\\src\\main",
+			"C:\\world\\prj\\haxe\\stax",
+			"C:\\world\\prj\\haxe\\stax\\src\\main",
+			"C:\\world\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\test",
+			"C:\\world\\prj\\haxe\\stax",
+			"C:\\world\\prj\\haxe\\stax\\src\\main\\haxe\\bot",
+			"C:\\world\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\bot",
+			"<project>",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\build\\boot",
+			"C:\\world\\stack\\prj\\haxe\\haxe\\std\\js\\html",
+			"C:\\world\\stack\\prj\\haxe\\haxe\\std",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\reactive\\observable",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\async\\arrowlet",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\async",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\async\\dissolvable",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\async\\ifs",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\rx",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\test",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\arrowlet",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\fnc\\ifs",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\neko\\neko\\vm",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\test\\haxe\\rx",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\rx",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx\\rx",
+			"C:\\World\\Stack\\os\\win\\src\\haxe\\std\\cs",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\funked",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src",
+			"C:\\world\\stack\\prj\\haxe\\stax\\src\\main\\haxe\\stx",
+			"C:\\world\\stack\\prj\\haxe\\stax",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\World\\Stack\\os\\win\\src\\haxe\\std",
+			"C:\\world\\stack\\prj\\stax\\src\\main\\haxe\\stx\\rct",
+			"C:\\world\\stack\\prj\\stax\\src",
+			"C:\\world\\stack\\prj\\stax\\src\\main\\haxe\\stx",
+			"C:\\world\\stack\\prj\\stax\\src",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\world\\stack\\prj\\stax\\src",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\world\\stack\\prj\\stax\\src",
+			"C:\\world\\stack\\prj\\stax\\src\\test\\haxe\\stx",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\world\\stack\\prj\\stax\\src",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\world\\stack\\prj\\stax\\src\\main\\haxe\\hx\\ds",
+			"C:\\world\\stack\\prj\\stax\\src\\main\\haxe\\hx",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\world\\stack\\prj\\stax\\src\\main\\haxe\\stx\\js",
+			"C:\\world\\stack\\prj\\stax",
+			"C:\\world\\stack\\prj\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\",
+			"C:\\world\\stack\\projects\\stax\\src\\main",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe\\stx\\io\\json\\types",
+			"C:\\world\\stack\\projects\\stax\\src\\main",
+			"C:\\world\\stack\\projects\\stax\\src\\test\\haxe",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe",
+			"C:\\world\\stack\\projects\\stax\\src\\main",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src\\main",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src\\main",
+			"C:\\world\\stack\\projects\\stax",
+			"C:\\world\\stack\\projects\\stax\\src\\main",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe\\stx",
+			"C:\\world\\stack\\projects\\stax",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe\\stx\\reactive",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe\\stx\\js",
+			"C:\\world\\stack\\projects\\stax",
+			"C:\\world\\stack\\projects\\stax\\src\\test",
+			"C:\\world\\stack\\projects\\stax",
+			"C:\\world\\stack\\projects\\stax\\src\\test",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"stx.util.Objects;",
+			"C:\\world\\stack\\projects\\stax\\src",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe\\stx",
+			"C:\\world\\stack\\projects\\stax\\src\\main\\haxe\\stx\\io\\json",
+			"C:\\world\\stack\\projects\\haxetacy",
+			"C:\\world\\stack\\projects\\jstm",
+			"C:\\world\\stack\\projects\\haxetacy",
+			"C:\\world\\stack\\projects\\jstm",
+			"C:\\world\\stack\\projects\\haxetacy",
+			"C:\\world\\stack\\projects\\troyworks\\unit\\com\\troyworks\\core\\cogs",
+			"C:\\world\\stack\\projects\\troyworks\\troyworks\\AS3\\tests\\src\\com\\troyworks\\core\\cogs",
+			"C:\\world\\stack\\projects\\troyworks\\troyworks\\AS3\\dev\\src\\com\\troyworks\\core\\cogs"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"then",
+			"CTUpshot",
+			"fromC",
+			"CUpshot",
+			"ArrowletUpshot",
+			"fromCal",
+			"from",
+			"new",
+			"TAr",
+			"then",
+			"RightChoice",
+			";\n",
+			"Arrowlet<Tuple2<A,B>,Tuple2<C,D>>",
+			"Callback",
+			".apply",
+			"split",
+			"fan",
+			"return noop;",
+			"CallbackAnymousArrowlet",
+			"(A -> R) -> R",
+			"TFuture",
+			"Callback",
+			"Code",
+			"latah",
+			"TFuture",
+			">Void",
+			":Void",
+			"IArrowlet",
+			"async",
+			"addendum",
+			".apply",
+			"IArrowlet",
+			"apply",
+			"stx.async.arrowlet.ifs.Arrowlet",
+			"Option",
+			"tab",
+			"TJQuery",
+			"JQuery",
+			"off",
+			"JqEvent",
+			"Event",
+			"JQuery",
+			"String",
+			"JqEvent",
+			"ArrowletWindmill",
+			"ArrowletState",
+			"TArrowlet",
+			"ArrowletState",
+			"Unit",
+			"Fail",
+			"haxe.ds._Option.",
+			"stx.async.",
+			"tink.core.",
+			"Option",
+			"thisarw",
+			"ActionArrowletType",
+			"Data",
+			"asFu",
+			"split",
+			"Arrowlet<Option<Error>>",
+			"using",
+			"Option",
+			"@doc(",
+			"FutureTr",
+			"Prelude.Upshot",
+			"Or",
+			"RightS",
+			"Then",
+			"Unit",
+			"FutureTrigger",
+			": FutureTrigger",
+			"FutureTri",
+			"\\",
+			"each",
+			"deliver",
+			"stx.async.",
+			"Eventual",
+			"stx.async.",
+			"Eventual",
+			"deliver",
+			"Eventual",
+			"Set",
+			"each",
+			"Fail",
+			"list",
+			"cy",
+			"cyg",
+			"Cell",
+			"var r = null;",
+			"lazy",
+			"Lazy",
+			"Pair",
+			"\\",
+			".snd()",
+			"fst()",
+			"fst",
+			"fst()",
+			"tuple2",
+			"\n    ",
+			"e:Fail",
+			"Fail",
+			"Niladic",
+			"Thunk",
+			"function",
+			"Thunk",
+			"d",
+			"Thunk",
+			"Either",
+			"Tuple2",
+			"\\",
+			"Tuple2",
+			"Tuples",
+			"time",
+			"snap",
+			"appen",
+			"foldL",
+			"hex",
+			"Void",
+			"readCl",
+			"nthreads",
+			":Void",
+			"sleep",
+			"Void",
+			"dissolve",
+			"dissolvable",
+			"Dissolvable",
+			"time",
+			"BotT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"apply",
+			"stx.async.ifs.Arrowlet",
+			"unsubscribe",
+			"subscription",
+			"Subscription",
+			"bot",
+			"stx.bot",
+			"valOrUse",
+			"valOrC",
+			"src/boot/haxe/",
+			"stx.reactive.dissolvable",
+			"stx.reactive.ifs.Observable",
+			"stx.reactive.observable",
+			"stx.parser",
+			"stx.async.Contract",
+			"stx.async.Eventual",
+			"hx.reactive",
+			"import hx.reactive.Dispatcher",
+			"stx.async.Continuation",
+			"stx.async.Arrowlet",
+			"stx.async.arrowlet",
+			"stx.test.Assert",
+			"hx.scheduler",
+			"stx",
+			"stx.Show",
+			"stx.lambda.Compose",
+			"stx.extend.Either",
+			"stx.extend.Outcome",
+			"stx.extend.Option",
+			"stx.lambda.Functions",
+			"stx.extend.Outcome",
+			"stx.io.Log",
+			"stx.lambda.Method",
+			"stx.extend.Compare",
+			"stx.extend.Tuples",
+			"stx.extend.$1",
+			"stx.extend",
+			"stx.async",
+			"stx.async.dissolvable",
+			"dissolvable",
+			"stx.async.ifs",
+			"Dissolvable",
+			"stx.async.Disolvable",
+			"Disolvable",
+			"disolvable",
+			"using stx.UnitTest;",
+			"import stx.UnitTest;",
+			"TestCase",
+			"Suite",
+			"extends Suite",
+			"stx.arrowlet",
+			"Arrowlet",
+			"Prelude",
+			"all",
+			"any",
+			"each",
+			"flatMapRight",
+			"flatMapLeft",
+			"mapRight",
+			"mapLeft",
+			"foldRight",
+			"foldLeft",
+			"ArgumentError",
+			"except",
+			"P1->P2->R",
+			"P1->P2->R1",
+			"P1->P2->P3",
+			"$1->Int",
+			"$1->String",
+			"Reduce<$1,Bool>",
+			"Reduce<$1,Int>",
+			"Prelude",
+			"Niladic",
+			"stx.fnc.ifs",
+			"stx.Either",
+			"stx.Option",
+			"rx",
+			"import",
+			"Eventual",
+			"stx.ds.ifs.Collection",
+			"stx.Arrow",
+			"$1(u:UnitArrow):UnitArrow",
+			"$1",
+			"function $1(u:UnitArrow):UnitArrow",
+			"tupled",
+			"function $1(u:UnitArrow):UnitArrow",
+			"LispListInstance",
+			"LispListType",
+			"LispList",
+			"enclose",
+			"fail(",
+			"descended",
+			"import stx.Compare.*;",
+			"import stx.Compare;",
+			"stx.Compare",
+			" ",
+			"import stx.Muster.*;",
+			"Future",
+			"stx.Arrows",
+			"stx.Errors",
+			"stx.rct",
+			"NiladicType",
+			"$1->Void",
+			"Tuples$1",
+			"Tuple3",
+			"Tuple2",
+			"import stx.Tuples;",
+			"Equal.getEqualFor($1)($1,$2)",
+			"Eventual",
+			"Iterator",
+			"ListEnumerator",
+			"ListInstance",
+			"foldLeft",
+			"HashFunction",
+			"tuple$1",
+			"tuple2",
+			"orElseConst",
+			"Callback",
+			"Option",
+			"set",
+			"getHashFor",
+			"foldl",
+			"__order__",
+			"order",
+			"getHashFor",
+			"IntMap",
+			"Hash",
+			"<K,V>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main/haxe/stx/async/arrowlet/Upshot.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2239,
+								2239
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 794.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/main/haxe/stx/async/arrowlet/types/Upshot.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								307,
+								307
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"open_with_edit": true,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main/haxe/stx/async/Arrowlet.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1903,
+								1903
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 301.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/main/haxe/stx/async/arrowlet/Windmill.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3431,
+								3431
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 912.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/test/haxe/Test.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/main/haxe/stx/async/arrowlet/types/RightChoice.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"open_with_edit": true,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/main/haxe/stx/async/arrowlet/Apply.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								281,
+								292
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/main/haxe/stx/async/arrowlet/types/LeftChoice.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"open_with_edit": true,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/main/haxe/stx/async/arrowlet/Repeat.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 86.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/main/haxe/stx/async/arrowlet/types/Repeat.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/main/haxe/stx/async/arrowlet/Unit.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 308,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/main/haxe/stx/async/arrowlet/Or.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/main/haxe/stx/async/arrowlet/Pair.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "src/main/haxe/stx/async/arrowlet/types/Pair.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/main/haxe/stx/async/arrowlet/Either.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								799,
+								799
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.haxe.2"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								},
+								{
+									"characters": ".#",
+									"selector": "text.html"
+								}
+							],
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 92.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 88.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 88.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 225.0
+	},
+	"output.exec":
+	{
+		"height": 251.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.haskell_sublime_load":
+	{
+		"height": 246.0
+	},
+	"output.haxe":
+	{
+		"height": 100.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 100.0
+	},
+	"output.jsconsole_view":
+	{
+		"height": 0.0
+	},
+	"output.jshint_view":
+	{
+		"height": 0.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 100.0
+	},
+	"output.php_builtin_server_panel":
+	{
+		"height": 154.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"project": "arrowlets.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"http",
+				"std/haxe/Http.hx"
+			],
+			[
+				"test",
+				"arrowlets/src/test/haxe/Test.hx"
+			],
+			[
+				"arrol",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"arrowl",
+				"arrowlets/src/main/haxe/stx/async/Arrowlet.hx"
+			],
+			[
+				"arro",
+				"arrowlets/src/main/haxe/stx/async/Arrowlet.hx"
+			],
+			[
+				"then",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Then.hx"
+			],
+			[
+				"arrooption",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Option.hx"
+			],
+			[
+				"option",
+				"addendum/stx/types/Option.hx"
+			],
+			[
+				"rightswi",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/RightSwitch.hx"
+			],
+			[
+				"rightc",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/RightChoice.hx"
+			],
+			[
+				"arroappl",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Apply.hx"
+			],
+			[
+				"leftchoi",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/LeftChoice.hx"
+			],
+			[
+				"repea",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Repeat.hx"
+			],
+			[
+				"tpair",
+				"tink_core/src/tink/core/Pair.hx"
+			],
+			[
+				"pair",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Pair.hx"
+			],
+			[
+				"arrowlet/type/p",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/types/Pair.hx"
+			],
+			[
+				"arrt/pai",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/types/Pair.hx"
+			],
+			[
+				"unit",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Unit.hx"
+			],
+			[
+				"functionar",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx"
+			],
+			[
+				"functionarr",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx"
+			],
+			[
+				"tarro",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"options",
+				"addendum/stx/Options.hx"
+			],
+			[
+				"arrow",
+				"arrowlets/src/main/haxe/stx/async/Arrowlet.hx"
+			],
+			[
+				"typearrowle",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"tie.",
+				"latah/stx/async/types/Tie.hx"
+			],
+			[
+				"typ/arrowl",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"rep",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Repeat.hx"
+			],
+			[
+				"iarrwo",
+				"arrowlets/src/main/haxe/stx/async/ifs/Arrowlet.hx"
+			],
+			[
+				"tarrowlet",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"callb",
+				"tink_core/src/tink/core/Callback.hx"
+			],
+			[
+				"iarro",
+				"arrowlets/src/main/haxe/stx/async/ifs/Arrowlet.hx"
+			],
+			[
+				"arrowle",
+				"arrowlets/src/main/haxe/stx/async/Arrowlet.hx"
+			],
+			[
+				"tarrow",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"arrowlet",
+				"arrowlets/src/main/haxe/stx/async/Arrowlet.hx"
+			],
+			[
+				"callba",
+				"tink_core/src/tink/core/Callback.hx"
+			],
+			[
+				"tfutu",
+				"latah/stx/async/types/Future.hx"
+			],
+			[
+				"tcon",
+				"latah/stx/async/types/Continuation.hx"
+			],
+			[
+				"tconti",
+				"latah/stx/async/types/Continuation.hx"
+			],
+			[
+				"tfuture",
+				"latah/stx/async/types/Future.hx"
+			],
+			[
+				"call",
+				"tink_core/src/tink/core/Callback.hx"
+			],
+			[
+				"future",
+				"tink_core/src/tink/core/Future.hx"
+			],
+			[
+				"conti",
+				"latah/stx/async/Continuation.hx"
+			],
+			[
+				"iarrol",
+				"arrowlets/src/main/haxe/stx/async/ifs/Arrowlet.hx"
+			],
+			[
+				"functions",
+				"pointwise/stx/Functions.hx"
+			],
+			[
+				"compo",
+				"pointwise/stx/Compose.hx"
+			],
+			[
+				"tarrol",
+				"arrowlets/src/main/haxe/stx/async/types/Arrowlet.hx"
+			],
+			[
+				"libs",
+				"arrowlets/hxml/libs.hxml"
+			],
+			[
+				"functiona",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx"
+			],
+			[
+				"functionarro",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/FunctionArrowlet.hx"
+			],
+			[
+				"iarrow",
+				"arrowlets/src/main/haxe/stx/async/ifs/Arrowlet.hx"
+			],
+			[
+				"ifs/a",
+				"addendum/stx/ifs/Apply.hx"
+			],
+			[
+				"apply",
+				"addendum/stx/Apply.hx"
+			],
+			[
+				"callab",
+				"arrowlets/src/test/haxe/stx/async/arrowlet/CallableTest.hx"
+			],
+			[
+				"futur",
+				"tink_core/src/tink/core/Future.hx"
+			],
+			[
+				"futu",
+				"tink_core/src/tink/core/Future.hx"
+			],
+			[
+				"combinat",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/Combinator.hx"
+			],
+			[
+				"arroel",
+				"arrowlets/src/main/haxe/stx/async/arrowlet/ifs/Arrowlet.hx"
+			],
+			[
+				"reply",
+				"addendum/stx/ifs/Reply.hx"
+			],
+			[
+				"task",
+				"arrowlets/src/main/haxe/stx/async/Task.hx"
+			],
+			[
+				"stx/ifs/",
+				"addendum/stx/ifs/Reply.hx"
+			],
+			[
+				"errors",
+				"addendum/stx/Errors.hx"
+			],
+			[
+				"anony",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\AnonymousArrowlet.hx"
+			],
+			[
+				"jque",
+				"std\\js\\JQuery.hx"
+			],
+			[
+				"jqu",
+				"std\\js\\JQuery.hx"
+			],
+			[
+				"js/even",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\js\\Event.hx"
+			],
+			[
+				"jquery",
+				"std\\js\\JQuery.hx"
+			],
+			[
+				"buil",
+				"arrowlets\\build.hxml"
+			],
+			[
+				"test.h",
+				"arrowlets\\src\\test\\haxe\\Test.hx"
+			],
+			[
+				"hax",
+				"arrowlets\\haxelib.json"
+			],
+			[
+				"haxeli",
+				"arrowlets\\haxelib.json"
+			],
+			[
+				".git",
+				"arrowlets\\.gitignore"
+			],
+			[
+				"bui",
+				"arrowlets\\build.hxml"
+			],
+			[
+				"test.hx",
+				"arrowlets\\src\\test\\haxe\\Test.hx"
+			],
+			[
+				"teset",
+				"arrowlets\\test\\neko_test.n"
+			],
+			[
+				"event",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\avm2\\Event.hx"
+			],
+			[
+				"action",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Action.hx"
+			],
+			[
+				"ifarro",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\ifs\\Arrowlet.hx"
+			],
+			[
+				"com",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Combinator.hx"
+			],
+			[
+				"appl",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Apply.hx"
+			],
+			[
+				"repeat",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Repeat.hx"
+			],
+			[
+				"pai",
+				"tink_core\\src\\tink\\core\\Pair.hx"
+			],
+			[
+				"comnb",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Combinator.hx"
+			],
+			[
+				"",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\Futures.hx"
+			],
+			[
+				"or",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Or.hx"
+			],
+			[
+				"crank",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Crank"
+			],
+			[
+				"wind",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Windmill"
+			],
+			[
+				"nek",
+				"arrowlets\\hxml\\test\\neko.hxml"
+			],
+			[
+				"test.",
+				"arrowlets\\src\\test\\haxe\\Test.hx"
+			],
+			[
+				"build",
+				"arrowlets\\build.hxml"
+			],
+			[
+				"neko",
+				"arrowlets\\hxml\\test\\neko.hxml"
+			],
+			[
+				"map",
+				"arrowlets\\src\\main\\haxe\\stx\\async\\arrowlet\\Map.hx"
+			],
+			[
+				"noi",
+				"tink_core\\src\\tink\\core\\Noise.hx"
+			],
+			[
+				"dispatcher",
+				"async\\src\\main\\haxe\\hx\\event\\Dispatcher.hx"
+			],
+			[
+				"impl/e",
+				"async\\src\\main\\haxe\\stx\\async\\impl\\Eventual.hx"
+			],
+			[
+				"eve",
+				"async\\src\\main\\haxe\\stx\\async\\Eventual.hx"
+			],
+			[
+				"vouhc",
+				"async\\src\\main\\haxe\\stx\\async\\Vouch.hx"
+			],
+			[
+				"vouch",
+				"async\\src\\main\\haxe\\stx\\async\\Vouch.hx"
+			],
+			[
+				"outc",
+				"tink\\tink\\core\\Outcome.hx"
+			],
+			[
+				"upshot",
+				"addendum\\stx\\Upshot.hx"
+			],
+			[
+				"fuutr",
+				"tink\\tink\\core\\Future.hx"
+			],
+			[
+				"impeven",
+				"async\\src\\main\\haxe\\stx\\async\\impl\\Eventual.hx"
+			],
+			[
+				"eventua",
+				"async\\src\\main\\haxe\\stx\\async\\Eventual.hx"
+			],
+			[
+				"contract",
+				"async\\src\\main\\haxe\\stx\\async\\Contract.hx"
+			],
+			[
+				"array",
+				"std\\Array.hx"
+			],
+			[
+				"even",
+				"async\\src\\main\\haxe\\stx\\async\\Eventual.hx"
+			],
+			[
+				"cont",
+				"async\\src\\main\\haxe\\stx\\async\\Contract.hx"
+			],
+			[
+				"impl/eve",
+				"async\\src\\main\\haxe\\stx\\async\\impl\\Eventual.hx"
+			],
+			[
+				"evenut",
+				"async\\src\\main\\haxe\\stx\\async\\Eventual.hx"
+			],
+			[
+				"eventu",
+				"async\\src\\main\\haxe\\stx\\async\\Eventual"
+			],
+			[
+				"cs.",
+				"pointwise\\hxml\\test\\cs.hxml"
+			],
+			[
+				"funct",
+				"pointwise\\src\\main\\haxe\\stx\\Functions.hx"
+			],
+			[
+				"ne",
+				"pointwise\\hxml\\test\\neko.hxml"
+			],
+			[
+				"function",
+				"pointwise\\src\\main\\haxe\\stx\\Functions.hx"
+			],
+			[
+				"cod",
+				"pointwise\\src\\main\\haxe\\stx\\Codeblock.hx"
+			],
+			[
+				"func",
+				"pointwise\\src\\main\\haxe\\stx\\Functions.hx"
+			],
+			[
+				"la",
+				"tink\\src\\tink\\core\\Lazy.hx"
+			],
+			[
+				"eerror",
+				"tink\\src\\tink\\core\\Error.hx"
+			],
+			[
+				"lazy",
+				"tink\\src\\tink\\core\\Lazy.hx"
+			],
+			[
+				"compose",
+				"stax\\src\\main\\haxe\\stx\\Compose.hx"
+			],
+			[
+				"neko.",
+				"stax\\build\\boot\\neko.hxml"
+			],
+			[
+				"strings",
+				"stax\\src\\main\\haxe\\stx\\Strings.hx"
+			],
+			[
+				"arrays.hx",
+				"stax\\src\\main\\haxe\\stx\\Arrays.hx"
+			],
+			[
+				"subs",
+				"stax\\src\\main\\haxe\\stx\\async\\Subscription.hx"
+			],
+			[
+				"baseo",
+				"stax\\src\\main\\haxe\\stx\\reactive\\observable\\BaseObservable.hx"
+			],
+			[
+				"waitin",
+				"stax\\src\\main\\haxe\\stx\\async\\ifs\\Waiting.hx"
+			],
+			[
+				"iobserva",
+				"stax\\src\\main\\haxe\\stx\\reactive\\ifs\\Observable.hx"
+			],
+			[
+				"stax",
+				"stax\\src\\main\\haxe\\Stax.hx"
+			],
+			[
+				"settest",
+				"stax\\src\\test\\haxe\\stx\\ds\\SetTest.hx"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"htt",
+				"~/prj/haxe/http/http.sublime-project"
+			],
+			[
+				"asyn",
+				"~/prj/haxe/latah/async.sublime-project"
+			],
+			[
+				"add",
+				"~/prj/haxe/addendum/addendum.sublime-project"
+			],
+			[
+				"",
+				"~/prj/node/sling/sling.sublime-project"
+			],
+			[
+				"ay",
+				"~/prj/haxe/latah/async.sublime-project"
+			],
+			[
+				"po",
+				"~/prj/haxe/pointwise/pointwise.sublime-project"
+			],
+			[
+				"poiu",
+				"~/prj/haxe/pointwise/pointwise.sublime-project"
+			],
+			[
+				"bot",
+				"~/prj/haxe/bot/bot.sublime-project"
+			],
+			[
+				"she",
+				"~/prj/haskell/shentong/shenting.sublime-project"
+			],
+			[
+				"st",
+				"~/prj/haxe/stax/stax.sublime-project"
+			],
+			[
+				"bo",
+				"~/prj/haxe/bot/bot.sublime-project"
+			],
+			[
+				"Arro",
+				"~/prj/haxe/arrowlets/arrowlets.sublime-project"
+			],
+			[
+				"adde",
+				"~/prj/haxe/addendum/addendum.sublime-project"
+			],
+			[
+				"asy",
+				"~/prj/haxe/async/async.sublime-project"
+			],
+			[
+				"ser",
+				"~/prj/haxe/server/server.sublime-project"
+			],
+			[
+				"h",
+				"C:\\world\\prj\\haxe\\http\\http.sublime-project"
+			],
+			[
+				"asyb",
+				"C:\\world\\prj\\haxe\\async\\async.sublime-project"
+			],
+			[
+				"str",
+				"C:\\world\\prj\\haxe\\streams\\streams.sublime-project"
+			],
+			[
+				"ara",
+				"C:\\world\\prj\\haxe\\arango\\arango.sublime-project"
+			],
+			[
+				"aran",
+				"C:\\world\\prj\\haxe\\arango\\arango.sublime-project"
+			],
+			[
+				"as",
+				"C:\\world\\prj\\haxe\\async\\async.sublime-project"
+			],
+			[
+				"b",
+				"C:\\world\\prj\\haxe\\bot\\bot.sublime-project"
+			],
+			[
+				"a",
+				"C:\\world\\prj\\haxe\\arango\\arango.sublime-project"
+			],
+			[
+				"cah",
+				"C:\\world\\prj\\clojure\\cahuna\\cahuna.sublime-project"
+			],
+			[
+				"qui",
+				"C:\\world\\prj\\haxe\\quiver\\quiver.sublime-project"
+			],
+			[
+				"ad",
+				"C:\\world\\prj\\haxe\\addendum\\addendum.sublime-project"
+			],
+			[
+				"cms",
+				"C:\\world\\prj\\haxe\\cms\\cms.sublime-project"
+			],
+			[
+				"c",
+				"C:\\world\\prj\\haxe\\cms\\cms.sublime-project"
+			],
+			[
+				"tro",
+				"C:\\world\\prj\\haxe\\troyworks\\troyworks.sublime-project"
+			],
+			[
+				"arr",
+				"C:\\world\\prj\\haxe\\arrow\\arrows.sublime-project"
+			],
+			[
+				"poi",
+				"C:\\world\\prj\\haxe\\pointwise\\pointwise.sublime-project"
+			],
+			[
+				"lib",
+				"C:\\world\\prj\\haxe\\lib\\hx_lib.sublime-project"
+			],
+			[
+				"libe",
+				"C:\\world\\prj\\neko\\neko-libevent\\neko-libevent.sublime-project"
+			],
+			[
+				"ffi",
+				"C:\\world\\prj\\haxe\\hxffi\\hxffi.sublime-project"
+			],
+			[
+				"hx_l",
+				"C:\\world\\prj\\haxe\\lib\\hx_lib.sublime-project"
+			],
+			[
+				"cli",
+				"C:\\world\\stack\\prj\\clinic\\clinica\\clinica.sublime-project"
+			],
+			[
+				"clini",
+				"C:\\world\\stack\\prj\\clinic\\clinica\\clinica.sublime-project"
+			],
+			[
+				"yan",
+				"C:\\world\\stack\\prj\\haxe\\yana\\yana.sublime-project"
+			],
+			[
+				"tar",
+				"C:\\world\\stack\\prj\\go\\tardisgo\\tardis.sublime-project"
+			],
+			[
+				"tard",
+				"C:\\world\\stack\\prj\\go\\tardisgo\\tardis.sublime-project"
+			],
+			[
+				"sim",
+				"C:\\world\\stack\\prj\\clinic\\simple_site\\simple_site.sublime-project"
+			],
+			[
+				"has",
+				"C:\\world\\stack\\prj\\haxe\\haxelib\\haxelib.sublime-project"
+			],
+			[
+				"dr",
+				"C:\\world\\stack\\prj\\haxe\\draw\\draw.sublime-project"
+			],
+			[
+				"quiv",
+				"C:\\world\\stack\\prj\\haxe\\quiver\\quiver.sublime-project"
+			],
+			[
+				"haxe",
+				"C:\\world\\stack\\prj\\haxe\\haxelib\\haxelib.sublime-project"
+			],
+			[
+				"hax",
+				"C:\\world\\stack\\prj\\haxe\\haxelib\\haxelib.sublime-project"
+			],
+			[
+				"sc",
+				"C:\\world\\stack\\prj\\haxe\\scuts\\scuts.sublime-project"
+			],
+			[
+				"qu",
+				"C:\\world\\stack\\prj\\haxe\\quiver\\quiver.sublime-project"
+			],
+			[
+				"hsm",
+				"/C/world/stack/prj/haxe/hsm2/hsm2.sublime-project"
+			],
+			[
+				"hs",
+				"/C/world/stack/prj/haxe/hsm2/hsm2.sublime-project"
+			],
+			[
+				"dra",
+				"/C/world/stack/prj/haxe/draw/draw.sublime-project"
+			],
+			[
+				"au",
+				"/C/world/stack/prj/haxe/auth/auth.sublime-project"
+			],
+			[
+				"hx_e",
+				"/C/world/stack/prj/haxe/hx_node_externs/hx_node_externs.sublime-project"
+			],
+			[
+				"scu",
+				"/C/world/stack/prj/haxe/scuts/scuts.sublime-project"
+			],
+			[
+				"ya",
+				"/C/world/stack/prj/haxe/yana/yana.sublime-project"
+			],
+			[
+				"orb",
+				"/C/world/stack/prj/haxe/orbit/orbit.sublime-project"
+			],
+			[
+				"mu",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"hx_",
+				"/C/world/stack/prj/haxe/hx_node_externs/hx_node_externs.sublime-project"
+			],
+			[
+				"quiver",
+				"/C/world/stack/prj/haxe/quiver/quiver.sublime-project"
+			],
+			[
+				"must",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"hx_node",
+				"/C/world/stack/prj/haxe/hx_node_externs/hx_node_externs.sublime-project"
+			],
+			[
+				"Mu",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"QU",
+				"/C/world/stack/prj/haxe/quiver/quiver.sublime-project"
+			],
+			[
+				"M",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"qiu",
+				"/C/world/stack/prj/haxe/quiver/quiver.sublime-project"
+			],
+			[
+				"q",
+				"/C/world/stack/prj/haxe/quiver/quiver.sublime-project"
+			],
+			[
+				"Mus",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"Must",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"w",
+				"/C/world/stack/prj/node/waltz/waltz.sublime-project"
+			],
+			[
+				"tr",
+				"/C/world/stack/prj/haxe/trait/traits4/traits4.sublime-project"
+			],
+			[
+				"tin",
+				"/C/world/stack/prj/haxe/tinkerbell/tinkerbell.sublime-project"
+			],
+			[
+				"y",
+				"/C/world/stack/prj/haxe/yana/yana.sublime-project"
+			],
+			[
+				"m",
+				"/C/world/stack/prj/haxe/muster/muster.sublime-project"
+			],
+			[
+				"user",
+				"/C/world/stack/prj/node/user/user.sublime-project"
+			],
+			[
+				"us",
+				"/C/world/stack/prj/node/user/user"
+			],
+			[
+				"oauthn",
+				"/C/world/stack/prj/node/oauthn/oauthn.sublime-project"
+			],
+			[
+				"cm",
+				"/G/home/dayz/php/cmf/cmf.sublime-project"
+			],
+			[
+				"cmf",
+				"/G/home/dayz/php/cmf/cmf.sublime-project"
+			],
+			[
+				"o",
+				"/G/home/dayz/php/oauth/oauth.sublime-project"
+			],
+			[
+				"ou",
+				"/G/home/dayz/php/oauth/oauth.sublime-project"
+			],
+			[
+				"oa",
+				"/G/home/dayz/php/oauth/oauth.sublime-project"
+			],
+			[
+				"box",
+				"/G/home/dayz/box.sublime-project"
+			],
+			[
+				"sta",
+				"/C/world/stack/prj/stax/stax.sublime-project"
+			],
+			[
+				"funk",
+				"/C/world/stack/prj/funk/funk.sublime-project"
+			],
+			[
+				"quq",
+				"/C/world/stack/prj/queue/queue.sublime-project"
+			],
+			[
+				"hx_n",
+				"/C/world/stack/prj/hx_node_externs/hx_node_externs.sublime-project"
+			],
+			[
+				"va",
+				"/C/world/stack/prj/vanilla/src/test/haxe/vnl/scala-pipes.sublime-project"
+			],
+			[
+				"van",
+				"/C/world/stack/prj/vanilla/vanilla.sublime-project"
+			],
+			[
+				"vanl",
+				"/C/world/stack/prj/vanilla/vanilla.sublime-project"
+			],
+			[
+				"v",
+				"/C/world/stack/prj/vanilla/vanilla.sublime-project"
+			],
+			[
+				"fun",
+				"/C/world/stack/prj/funk/funk.sublime-project"
+			],
+			[
+				"que",
+				"/C/world/stack/prj/queue/queue.sublime-project"
+			],
+			[
+				"f",
+				"/C/world/stack/prj/funk/funk.sublime-project"
+			],
+			[
+				"sup	",
+				"/C/world/stack/prj/super/super.sublime-project"
+			],
+			[
+				"super",
+				"/C/world/stack/prj/super/super.sublime-project"
+			],
+			[
+				"libserv",
+				"/C/world/stack/prj/tools/libserv/libserv.sublime-project"
+			],
+			[
+				"th",
+				"/C/world/stack/prj/wwx13/three_show/three_show.sublime-project"
+			],
+			[
+				"ar",
+				"/C/world/stack/prj/arw2/arw2.sublime-project"
+			],
+			[
+				"pl",
+				"/C/world/stack/prj/test/stx_plus_test/stx_plus_test.sublime-project"
+			],
+			[
+				"thre",
+				"/C/world/stack/prj/wwx13/three_show/three_show.sublime-project"
+			],
+			[
+				"wa",
+				"/C/world/stack/prj/walkabout/walkabout.sublime-project"
+			],
+			[
+				"wal",
+				"/C/world/stack/prj/walkabout/walkabout.sublime-project"
+			],
+			[
+				"Van",
+				"/C/world/stack/prj/vanilla/vanilla.sublime-project"
+			],
+			[
+				"vna",
+				"/C/world/stack/prj/vanilla/vanilla.sublime-project"
+			],
+			[
+				"use",
+				"/C/world/stack/prj/user/user.sublime-project"
+			],
+			[
+				"it",
+				"/C/world/stack/prj/iteratee/iteratee.sublime-project"
+			],
+			[
+				"u",
+				"/C/world/stack/prj/user/user.sublime-project"
+			],
+			[
+				"ab",
+				"/C/world/stack/prj/abstracttypes/abstracttypes.sublime-project"
+			],
+			[
+				"abs",
+				"/C/world/stack/prj/abstracttypes/abstracttypes.sublime-project"
+			],
+			[
+				"abstr",
+				"/C/world/stack/prj/abstracttypes/abstracttypes.sublime-project"
+			],
+			[
+				"pop",
+				"/C/world/stack/prj/popcorn/popcorn.sublime-project"
+			],
+			[
+				"popco",
+				"/C/world/stack/prj/popcorn/popcorn.sublime-project"
+			],
+			[
+				"p",
+				"/C/world/stack/prj/push/push.sublime-project"
+			],
+			[
+				"stx.w",
+				"/C/world/stack/prj/stax.wiki/stax.wiki.sublime-project"
+			],
+			[
+				"stax.w",
+				"/C/world/stack/prj/stax.wiki/stax.wiki.sublime-project"
+			],
+			[
+				"Vani",
+				"/C/world/stack/prj/Vanilla/vanilla.sublime-project"
+			],
+			[
+				"hxun",
+				"/C/world/stack/prj/hxunit/hxunit.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 656.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 308.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,8 +1,8 @@
 package stx.async;
 
 import stx.types.Sink;
-import stx.Functions.Codeblocks.NIL in noop;
-import stx.async.types.Future in Callback;
+import stx.Functions.Blocks.NIL in noop;
+
 import stx.async.arrowlet.types.State in TState;
 import tink.core.Callback;
 import tink.core.Future;
@@ -57,6 +57,24 @@ using stx.Tuples;
   public function new(v:TArrowlet<I,O>){
     this  = v;
   }
+  @:from static inline public function fromCallbackWithNoCanceller<A,B>(fn:A -> Sink<B> -> Void):Arrowlet<A,B>{
+    return new Arrowlet(function(i:A,cont:Sink<B>):Block{
+      var cancelled = false;
+
+      if(!cancelled){
+        fn(i,
+          function(o){
+            if(!cancelled){
+              cont(o);
+            }
+          }
+        );
+      }
+      return function(){
+        cancelled = true;
+      }
+    });
+  }
   @:from static inline public function fromFunction<A,B>(fn:A->B):Arrowlet<A,B>{
     return new FunctionArrowlet(fn);
   }
@@ -93,26 +111,15 @@ using stx.Tuples;
       b(fn(a));
     });
   }
-  @:from static inline public function fromCallbackWithNoCanceller<A,B>(fn:A -> Sink<B> -> Void):Arrowlet<A,B>{
-    return new Arrowlet(function(i:A,cont:Sink<B>):Block{
-      var cancelled = false;
-
-      if(!cancelled){
-        fn(i,
-          function(o){
-            if(!cancelled){
-              cont(o);
-            }
-          }
-        );
-      }
-      return function(){
-        cancelled = true;
-      }
-    });
-  }
 }
 class Arrowlets{
+  static public function inject<A,B,C>(arw:Arrowlet<A,B>,v:C):Arrowlet<A,C>{
+    return then(arw,
+      function(b:B){
+        return v;
+      }
+    );
+  }
   static public inline function tap<I,O>(arw:Arrowlet<I,O>,fn:O->Void){
     return then(arw,
       Arrowlet.fromCallbackWithNoCanceller(function(i,cont){

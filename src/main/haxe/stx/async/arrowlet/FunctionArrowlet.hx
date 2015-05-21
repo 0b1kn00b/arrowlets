@@ -1,7 +1,6 @@
 package stx.async.arrowlet;
 
 import stx.types.Sink;
-import stx.async.types.Future;
 import stx.types.Block;
 import tink.core.Callback;
 
