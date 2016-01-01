@@ -1,7 +1,6 @@
 package stx.async.types;
 
-import stx.types.Sink;
-import stx.types.Block;
+import stx.data.*;
 import tink.core.Callback;
 
 //(A -> R) -> R

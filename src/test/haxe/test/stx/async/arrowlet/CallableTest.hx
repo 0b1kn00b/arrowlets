@@ -1,10 +1,10 @@
-package stx.async.arrowlet;
+package test.stx.async.arrowlet;
 
 using stx.async.Arrowlet;
 
 class CallableTest{
   public function new(){
-    
+
   }
   public function testForward(){
     var v : Arrowlet<Int,Int> = function(x) {return x;};

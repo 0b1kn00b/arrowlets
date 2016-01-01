@@ -5,7 +5,6 @@ using Lambda;
 class Test{
   static function main(){
     CompileTime.importPackage("test");
-    CompileTime.importPackage("stx.async");
 
     var a = new utest.Runner();
     utest.ui.Report.create(a);

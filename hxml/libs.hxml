@@ -1,6 +1,0 @@
--lib pointwise
--lib tink_core
--lib stx_addendum 
--lib latah
-
--lib utest

@@ -2,17 +2,13 @@ package stx.async.arrowlet;
 
 import tink.core.Future;
 import haxe.ds.Option in EOption;
-import stx.Tuples;
+using stx.Tuple;
 import stx.types.*;
 
-using stx.Compose;
-using stx.Options;
+
 using stx.async.Arrowlet;
+using stx.Pointwise;
 
-using stx.Tuples;
-using stx.Functions;
-
-import stx.async.ifs.Arrowlet in IArrowlet;
 
 import stx.async.arrowlet.types.Option in TOption;
 

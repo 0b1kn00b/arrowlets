@@ -1,2 +1,9 @@
-hxml/libs.hxml
+-lib pointwise
+-lib stx_tuple
+-lib tink_core
+-lib compiletime
+
+-lib utest
+
+
 hxml/test/nodejs.hxml

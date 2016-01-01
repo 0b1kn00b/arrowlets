@@ -1,16 +1,16 @@
 package stx.async.arrowlet;
 
 import haxe.ds.Option;
-using stx.Options;
-import stx.types.Tuple2;
-import tink.core.Future;
-import stx.Tuples;
 
-using stx.Tuples;
+using tink.CoreApi;
+
+using stx.Tuple;
 import stx.types.*;
 using stx.async.Arrowlet;
 
 import stx.async.arrowlet.types.Pair in TPair;
+
+
 
 abstract Pair<A,B,C,D>(Arrowlet<Tuple2<A,C>,Tuple2<B,D>>) from Arrowlet<Tuple2<A,C>,Tuple2<B,D>> to Arrowlet<Tuple2<A,C>,Tuple2<B,D>>{
   public function new(fst:Arrowlet<A,B>,snd:Arrowlet<C,D>){
@@ -22,9 +22,10 @@ abstract Pair<A,B,C,D>(Arrowlet<Tuple2<A,C>,Tuple2<B,D>>) from Arrowlet<Tuple2<A
     		return (a != None) && (b != None);
     	}
     	function go(){
-    		if(ready() && !cancelled){
-    			cont(a.zip(b).ensure());
-    		}
+        switch([ready(),cancelled,a,b]){
+          case[true,false,Some(l),Some(r)] : cont(tuple2(l,r));
+          default:
+        }
     	}
     	fst(t.fst(),
     		function(x){
@@ -62,7 +63,7 @@ abstract Pair<A,B,C,D>(Arrowlet<Tuple2<A,C>,Tuple2<B,D>>) from Arrowlet<Tuple2<A
 					merge(Options.valOrC(ol,null),Options.valOrC(or,null));
 				}
 			}
-		var hl 		= 
+		var hl 		=
 			function(v:B){
 				ol = v == null ? None : Some(v);
 				check();

@@ -1,6 +1,6 @@
 package stx.async.arrowlet.types;
 
-import stx.types.Free;
+import tink.CoreApi;
 import stx.async.Arrowlet;
 
-typedef Repeat<I,O> = Arrowlet<I,Free<I,O>>;
+typedef Repeat<I,O> = Arrowlet<I,tink.core.Either<I,O>>;

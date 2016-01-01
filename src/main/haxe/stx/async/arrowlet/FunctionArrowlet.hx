@@ -1,10 +1,7 @@
 package stx.async.arrowlet;
 
-import stx.types.Sink;
-import stx.types.Block;
+import stx.data.*;
 import tink.core.Callback;
-
-import stx.async.ifs.Arrowlet in IArrowlet;
 
 abstract FunctionArrowlet<I,O>(Arrowlet<I,O>) from Arrowlet<I,O> to Arrowlet<I,O>{
   public function new(fn){

@@ -1,14 +1,16 @@
 package stx.async.arrowlet.js;
 
-import stx.async.arrowlet.AnonymousArrowlet;
 using stx.async.Arrowlet;
-import stx.types.Tuple2;
+using stx.Tuple;
+
+#if (!nodejs && js)
 import js.JQuery.JqEvent;
 import js.JQuery in TJQuery;
 
+
 abstract JQueryEvent(Arrowlet<String,JqEvent>) from Arrowlet<String,JqEvent> to Arrowlet<String,JqEvent>{
   public function new(j:TJQuery){
-    this = new AnonymousArrowlet(
+    this =
       function withInput(?i: String, cont : JqEvent -> Void){
         var cancel    = null;
         var listener  =
@@ -20,7 +22,8 @@ abstract JQueryEvent(Arrowlet<String,JqEvent>) from Arrowlet<String,JqEvent> to 
           i,
           listener
         );
+        return function(){};
       }
-    );
   }
 }
+#end

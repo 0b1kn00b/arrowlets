@@ -1,14 +1,13 @@
 package stx.async.arrowlet;
 
 import stx.types.Chunk;
-import stx.types.Tuple2;
+using stx.Tuple;
 import tink.core.Noise;
 import tink.core.Error;
 import stx.types.*;
 
 import stx.Compare.*;
 
-import stx.Tuples.*;
 import tink.core.Error;
 import stx.async.Vouch;
 import stx.async.arrowlet.types.State in TState;
@@ -19,13 +18,12 @@ import stx.async.arrowlet.State in StateArrowlets;
 
 using stx.Options;
 using stx.async.Arrowlet;
-using stx.Compose;
-using stx.Tuples;
+using stx.Pointwise;
 
 using stx.Chunk;
 
 
-abstract Windmill<S,A>(TWindmill<S,A>) from TWindmill<S,A> to TWindmill<S,A>{ 
+abstract Windmill<S,A>(TWindmill<S,A>) from TWindmill<S,A> to TWindmill<S,A>{
   static public function pure<S,A>(a:A):Windmill<S,A>{
     return function(s:S,cont:Tuple2<Chunk<A>,S>->Void):Void{
       cont(tuple2(Val(a),s));

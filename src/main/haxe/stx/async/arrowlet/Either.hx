@@ -2,14 +2,11 @@ package stx.async.arrowlet;
 
 import haxe.ds.Option;
 import tink.core.Future;
-import stx.types.*;
-import stx.types.Tuple2;
-import stx.Tuples;
+import stx.data.*;
+using stx.Tuple;
 
-import stx.async.ifs.Arrowlet in IArrowlet;
 
 using stx.async.Arrowlet;
-using stx.Tuples;
 
 abstract Either<I,O>(Arrowlet<I,O>) from Arrowlet<I,O> to Arrowlet<I,O>{
 	public function new(l:Arrowlet<I,O>,r:Arrowlet<I,O>){

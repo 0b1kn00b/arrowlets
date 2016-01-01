@@ -2,13 +2,11 @@ package stx.async.arrowlet;
 
 import tink.core.Future;
 
-import stx.Tuples;
+using stx.Tuple;
 import tink.core.Either in EEither;
-import stx.types.*;
-import stx.types.Tuple2;
+import stx.data.*;
 using stx.async.Arrowlet;
 
-import stx.async.ifs.Arrowlet in IArrowlet;
 
 import stx.async.arrowlet.types.LeftChoice in TLeftChoice;
 

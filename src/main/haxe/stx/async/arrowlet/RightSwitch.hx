@@ -1,12 +1,9 @@
 package stx.async.arrowlet;
 
 import tink.core.Future;
-
-import stx.async.ifs.Arrowlet in IArrowlet;
-
 import tink.core.Either;
 
-import stx.types.*;
+import stx.data.*;
 using stx.async.Arrowlet;
 
 abstract RightSwitch<A,B,C,D>(Arrowlet<Either<A,B>,Either<A,D>>) from Arrowlet<Either<A,B>,Either<A,D>> to Arrowlet<Either<A,B>,Either<A,D>>{
@@ -18,5 +15,5 @@ abstract RightSwitch<A,B,C,D>(Arrowlet<Either<A,B>,Either<A,D>>) from Arrowlet<E
       }
     });
   }
-  
+
 }

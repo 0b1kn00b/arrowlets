@@ -1,9 +1,7 @@
 package stx.async.arrowlet;
 
-import stx.types.Sink;
+import stx.data.*;
 import tink.core.Future;
-
-import stx.async.ifs.Arrowlet in IArrowlet;
 
 abstract Unit<I>(Arrowlet<I,I>) from Arrowlet<I,I> to Arrowlet<I,I>{
   public function new(){

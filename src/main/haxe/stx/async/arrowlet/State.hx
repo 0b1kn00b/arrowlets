@@ -1,18 +1,15 @@
 package stx.async.arrowlet;
 
-import stx.types.Tuple2;
-using stx.Compose;
+using stx.Tuple;
+using stx.Pointwise;
 
 import stx.types.*;
 
 import stx.async.arrowlet.types.State in TState;
 import stx.async.arrowlet.*;
-import stx.Tuples.Tuples2.*;
 
-using stx.Tuples;
 using stx.async.Arrowlet;
 
-import stx.async.ifs.Arrowlet in IArrowlet;
 
 using stx.async.arrowlet.State;
 
@@ -56,14 +53,14 @@ class State<S,A>{
   static public function request<S,A>(arw0:TState<S,A>):Arrowlet<S,A>{
     return arw0.then(
       function(t:Tuple2<A,S>){
-        return fst(t);
+        return Tuples2.fst(t);
       }
     );
   }
   static public function resolve<S,A>(arw0:TState<S,A>){
     return arw0.then(
       function(t:Tuple2<A,S>){
-        return snd(t);
+        return Tuples2.snd(t);
       }
     );
   }
@@ -74,5 +71,5 @@ class State<S,A>{
       }
     );
   }
-  
+
 }

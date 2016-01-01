@@ -1,17 +1,17 @@
 package stx.async.arrowlet;
 
+import stx.data.Sink;
 import tink.core.Callback;
-import stx.types.Tuple2;
+using stx.Tuple;
 import stx.types.Fault;
 import tink.core.Error;
 
-import stx.types.*;
+import stx.data.*;
 
 import tink.core.Error;
 import stx.Compare.*;
 
 import stx.Upshot;
-import stx.Tuples;
 import stx.Eithers;
 
 using stx.async.Arrowlet;
@@ -56,7 +56,7 @@ class Upshots{
       switch (x) {
         case Success(x) : arw1(x,cont);
         case Failure(x) : cont(Failure(x));
-      }        
+      }
     }
     return arw0.then(arwN);
   }

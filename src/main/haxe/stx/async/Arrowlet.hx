@@ -1,40 +1,33 @@
 package stx.async;
 
-import stx.types.Sink;
-import stx.Functions.Blocks.NIL in noop;
+import tink.CoreApi;
+
+import stx.data.*;
+import stx.core.Blocks.NIL in noop;
 
 import stx.async.arrowlet.types.State in TState;
 import tink.core.Callback;
 import tink.core.Future;
 import tink.core.Error;
-import stx.types.Tuple2;
+using stx.Tuple;
 
-import stx.types.Fault;
 import haxe.ds.Option in EOption;
 import tink.core.Either in EEither;
 import stx.types.*;
 
 import stx.type.*;
 
-import stx.ifs.Value;
-
-import stx.Compare.*;
-
-import stx.test.Assert.*;
-
-import stx.Tuples;
-
+/*
 import stx.Eithers;
 import stx.Options;
-
+*/
 import stx.async.types.Arrowlet in TArrowlet;
-import stx.async.ifs.Arrowlet in IArrowlet;
+
 import stx.async.arrowlet.*;
 import stx.async.arrowlet.Option;
 import stx.async.arrowlet.State;
 import stx.async.arrowlet.Either;
 
-using stx.Tuples;
 
 @:callable abstract Arrowlet<I,O>(TArrowlet<I,O>) from TArrowlet<I,O>{
   @doc("Externally accessible constructor.")
@@ -75,18 +68,22 @@ using stx.Tuples;
       }
     });
   }
-  @:from static inline public function fromFunction<A,B>(fn:A->B):Arrowlet<A,B>{
+  @:noCompletion @:from static inline public function fromFunction<A,B>(fn:A->B):Arrowlet<A,B>{
     return new FunctionArrowlet(fn);
+  }
+  static public inline function toArrowlet<A,B>(fn:A->B):Arrowlet<A,B>{
+    return fromFunction(fn);
   }
   @:from static inline public function fromEndo<A>(fn:A->A):Arrowlet<A,A>{
     return fromFunction(fn);
   }
-  @:from static inline public function fromFunction2<A,B,C>(fn:A->B->C):Arrowlet<Tuple2<A,B>,C>{
+  @:noCompletion @:from static inline public function fromFunction2<A,B,C>(fn:A->B->C):Arrowlet<Tuple2<A,B>,C>{
     //trace('fromFunction2');
     return Arrowlet.fromCallbackWithNoCanceller(function(a:Tuple2<A,B>,b:Sink<C>){
       b(fn.tupled()(a));
     });
   }
+  /*
   @:from static inline public function fromFunction3<A,B,C,D>(fn:A->B->C->D):Arrowlet<Tuple3<A,B,C>,D>{
     //trace('fromFunction3');
     return Arrowlet.fromCallbackWithNoCanceller(function(a:Tuple3<A,B,C>,b:Sink<D>){
@@ -104,7 +101,7 @@ using stx.Tuples;
     return Arrowlet.fromCallbackWithNoCanceller(function(a:Tuple5<A,B,C,D,E>,b:Sink<F>){
       b(fn.tupled()(a));
     });
-  }
+  }*/
   @:from static inline public function fromStateFunction<A,B>(fn:A->Tuple2<B,A>):Arrowlet<A,Tuple2<B,A>>{
     //trace('fromStateFunction');
     return Arrowlet.fromCallbackWithNoCanceller(function(a:A,b:Sink<Tuple2<B,A>>){
@@ -113,6 +110,11 @@ using stx.Tuples;
   }
 }
 class Arrowlets{
+  static public function later<A,B>(arw:Arrowlet<A,B>,v:A):Arrowlet<Noise,B>{
+    return function(n:Noise,cont){
+      return arw(v,cont);
+    }
+  }
   static public function inject<A,B,C>(arw:Arrowlet<A,B>,v:C):Arrowlet<A,C>{
     return then(arw,
       function(b:B){
@@ -146,7 +148,7 @@ class Arrowlets{
     return apply(arw,i);
   }
   @doc("left to right composition of Arrowlets. Produces an Arrowlet running `before` and placing it's value in `after`.")
-  static public function then<A,B,C>(before:Arrowlet<A,B>, after:Arrowlet<B,C>):Arrowlet<A,C> { 
+  static public function then<A,B,C>(before:Arrowlet<A,B>, after:Arrowlet<B,C>):Arrowlet<A,C> {
     return new Then(before,after);
   }
   @doc("Takes an Arrowlet<A,B>, and produces one taking a Tuple2 that runs the Arrowlet on the left-hand side, leaving the right-handside untouched.")
@@ -158,14 +160,14 @@ class Arrowlets{
     return pair(Arrowlet.unit(), second);
   }
   @doc("Takes two Arrowlets with the same input type, and produces one which applies each Arrowlet with thesame input.")
-  static public function split<A, B, C>(split_:Arrowlet<A, B>, _split:Arrowlet<A, C>):Arrowlet<A, Tuple2<B,C>> { 
+  static public function split<A, B, C>(split_:Arrowlet<A, B>, _split:Arrowlet<A, C>):Arrowlet<A, Tuple2<B,C>> {
     return function(i:A, cont:Tuple2<B,C>->Void) : Void{
       return withInput(pair(split_,_split),tuple2(i,i) , cont);
     };
   }
   @doc("Takes two Arrowlets and produces on that runs them in parallel, waiting for both responses before output.")
-  static public function pair<A,B,C,D>(pair_:Arrowlet<A,B>,_pair:Arrowlet<C,D>):Arrowlet<Tuple2<A,C>, Tuple2<B,D>> { 
-    return new Pair(pair_,_pair);
+  static public function pair<A,B,C,D>(pair_:Arrowlet<A,B>,_pair:Arrowlet<C,D>):Arrowlet<Tuple2<A,C>, Tuple2<B,D>> {
+    return new stx.async.arrowlet.Pair(pair_,_pair);
   }
   @doc("Changes <B,C> to <C,B> on the output of an Arrowlet")
   static public function swap<A,B,C>(a:Arrowlet<A,Tuple2<B,C>>):Arrowlet<A,Tuple2<C,B>>{
@@ -189,7 +191,7 @@ class Arrowlets{
   }
   @doc("Casts the output of an Arrowlet to `type`.")
   static public function as<A,B,C>(a:Arrowlet<A,B>,type:Class<C>):Arrowlet<A,C>{
-    return then(a, function(x:B):C { return cast x; } ); 
+    return then(a, function(x:B):C { return cast x; } );
   }
   @doc("Runs the first Arrowlet, then the second, preserving the output of the first on the left-hand side.")
   static public function join<A,B,C>(joinl:Arrowlet<A,B>,joinr:Arrowlet<B,C>):Arrowlet<A,Tuple2<B,C>>{
@@ -200,7 +202,7 @@ class Arrowlets{
     return then( split(Arrowlet.unit(),bindl) , bindr );
   }
   @doc("Runs an Arrowlet until it returns Done(out).")
-  static public function repeat<I,O>(a:Arrowlet<I,Free<I,O>>):Arrowlet<I,O>{
+  static public function repeat<I,O>(a:Arrowlet<I,tink.Either<I,O>>):Arrowlet<I,O>{
     return new Repeat(a);
   }
   @doc("Produces an Arrowlet that will run `or_` if the input is Left(in), or '_or' if the input is Right(in);")
@@ -225,7 +227,15 @@ class Arrowlets{
   }
   @doc("Takes an Arrowlet that produces an Either, and produces one that will run that Arrowlet if the input is Left.")
   public static function fromLeft<A,B,C,D>(arr:Arrowlet<A,EEither<C,D>>):Arrowlet<EEither<A,D>,EEither<C,D>>{
-    return then(new LeftChoice(arr),Eithers.flattenL);
+    return then(new LeftChoice(arr),
+      function(e){
+        return switch(e){
+          case Left(Left(l))  : Left(l);
+          case Left(Right(r)) : Right(r);
+          case Right(r) : Right(r);
+        }
+      }
+    );
   }
   @doc("Produces an Arrowlet that is applied if the input is Some.")
   public static function option<I,O>(a:Arrowlet<I,O>):Arrowlet<EOption<I>,EOption<O>>{
@@ -241,7 +251,14 @@ class Arrowlets{
   }
   @doc("Flattens the output of an Arrowlet where it is Option<Option<O>> ")
   static public function flatten<I,O>(arw:Arrowlet<EOption<I>,EOption<EOption<O>>>):Arrowlet<EOption<I>,EOption<O>>{
-    return Arrowlets.then(arw, stx.Options.flatten);
+    return Arrowlets.then(arw,
+      function(v){
+        return switch(v){
+          case Some(Some(v)) : Some(v);
+          default: None;
+        }
+      }
+    );
   }
   @doc("Takes an Arrowlet that produces an Option and returns one that takes an Option also.")
   static public function fromOption<I,O>(arw:Arrowlet<I,EOption<O>>):Arrowlet<EOption<I>,EOption<O>>{
@@ -275,7 +292,7 @@ class Arrowlets{
         function(){
           cont(i);
         },ms);
-    }     
+    }
     return out;
   }
   #end

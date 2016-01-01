@@ -1,13 +1,13 @@
 package stx.async.arrowlet;
 
 import tink.core.Future;
-import stx.types.Tuple2;
+
 import tink.core.Either in EEither;
-import stx.Tuples;
-import stx.types.*;
+using stx.Tuple;
+import stx.data.*;
 using stx.async.Arrowlet;
 
-import stx.async.ifs.Arrowlet in IArrowlet;
+
 import stx.async.arrowlet.types.RightChoice in TRightChoice;
 
 abstract RightChoice<B,C,D>(TRightChoice<B,C,D>) from TRightChoice<B,C,D> to TRightChoice<B,C,D>{

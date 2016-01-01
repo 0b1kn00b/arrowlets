@@ -1,4 +1,4 @@
-package stx.async.arrowlet.js;
+package test.stx.async.arrowlet.js;
 
 
 import stx.async.arrowlet.js.JQueryEvent;
